@@ -16,10 +16,10 @@ import top.theillusivec4.curios.api.SlotContext;
 import top.theillusivec4.curios.api.type.capability.ICurioItem;
 
 // 海蓝宝石戒指：暴击率 +5%（效果见 CriticalHitEvents）
-public class AquamarineRing extends Item implements ICurioItem {
+public class AquamarineRing extends DescribedItem implements ICurioItem {
 
     public AquamarineRing(Item.Properties properties) {
-        super(properties);
+        super(properties, "tooltip.stardewaccessories.aquamarine_ring.desc");
     }
 
     @Override

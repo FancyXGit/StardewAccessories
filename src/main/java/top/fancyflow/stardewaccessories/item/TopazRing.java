@@ -16,10 +16,10 @@ import top.theillusivec4.curios.api.SlotContext;
 import top.theillusivec4.curios.api.type.capability.ICurioItem;
 
 // 黄水晶戒指：盔甲 +6 点
-public class TopazRing extends Item implements ICurioItem {
+public class TopazRing extends DescribedItem implements ICurioItem {
 
     public TopazRing(Item.Properties properties) {
-        super(properties);
+        super(properties, "tooltip.stardewaccessories.topaz_ring.desc");
     }
 
     @Override

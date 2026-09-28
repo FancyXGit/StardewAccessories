@@ -21,8 +21,18 @@
   "item.stardewaccessories.topaz": "黄水晶",
   "item.stardewaccessories.topaz_ring": "黄水晶戒指",
   "itemGroup.stardewaccessories": "星露谷饰品",
+  "tooltip.stardewaccessories.amethyst_ring.desc": "附魔的紫水晶，挥击时带着一股暗劲",
+  "tooltip.stardewaccessories.aquamarine_ring.desc": "一汪附魔的海水，让破绽无处可藏",
+  "tooltip.stardewaccessories.emerald_ring.desc": "附魔的绿宝石，让出手的节奏轻快起来",
   "tooltip.stardewaccessories.glow_ring": "明亮地照亮周围",
+  "tooltip.stardewaccessories.glow_ring.desc": "一团明亮的光，照着你走过夜路",
+  "tooltip.stardewaccessories.jade_ring.desc": "温润的翡翠里，藏着一道锋芒",
+  "tooltip.stardewaccessories.lumenite_ring_blank.desc": "流明晶打磨的戒圈，还留着一丝微光",
   "tooltip.stardewaccessories.not_installed": "未安装时不发光",
   "tooltip.stardewaccessories.requires_lambdynlights": "需要安装 LambDynamicLights",
-  "tooltip.stardewaccessories.small_glow_ring": "略微照亮周围"
+  "tooltip.stardewaccessories.ring_blank.desc": "一枚素圈，等着被镶上宝石",
+  "tooltip.stardewaccessories.ruby_ring.desc": "附魔的红宝石，让每一击都更沉一分",
+  "tooltip.stardewaccessories.small_glow_ring": "略微照亮周围",
+  "tooltip.stardewaccessories.small_glow_ring.desc": "一簇微光，在黑暗里静静亮着",
+  "tooltip.stardewaccessories.topaz_ring.desc": "戴着这个会感觉安全一点点"
 }

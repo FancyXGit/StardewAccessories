@@ -43,5 +43,17 @@ public class ModLanguageEnglish extends LanguageProvider {
         add("tooltip.stardewaccessories.glow_ring", "Brightly lights up the area around you");
         add("tooltip.stardewaccessories.requires_lambdynlights", "Requires LambDynamicLights");
         add("tooltip.stardewaccessories.not_installed", "No effect when not installed");
+
+        // Flavor descriptions
+        add("tooltip.stardewaccessories.ruby_ring.desc", "An enchanted ruby, putting more weight behind every swing");
+        add("tooltip.stardewaccessories.emerald_ring.desc", "An enchanted emerald, quickening the rhythm of your strikes");
+        add("tooltip.stardewaccessories.jade_ring.desc", "A sharp edge sleeps within the smooth jade");
+        add("tooltip.stardewaccessories.aquamarine_ring.desc", "A drop of enchanted sea, leaving no weak point hidden");
+        add("tooltip.stardewaccessories.topaz_ring.desc", "You feel a little bit safer wearing this");
+        add("tooltip.stardewaccessories.amethyst_ring.desc", "Enchanted amethyst, giving every blow a stubborn shove");
+        add("tooltip.stardewaccessories.small_glow_ring.desc", "A tiny light, glowing softly in the dark");
+        add("tooltip.stardewaccessories.glow_ring.desc", "A bright, steady light to see you through the night");
+        add("tooltip.stardewaccessories.ring_blank.desc", "A plain band, waiting for a gem");
+        add("tooltip.stardewaccessories.lumenite_ring_blank.desc", "A lumenite band, still holding a trace of light");
     }
 }

@@ -12,12 +12,12 @@ import top.theillusivec4.curios.api.type.capability.ICurioItem;
 
 // 发光戒指的公共部分：物品备注里的前置提示 + Curios 作用区里的作用行。
 // 作用行文案由子类通过 effectKey 传入。
-public abstract class AbstractGlowRing extends Item implements ICurioItem {
+public abstract class AbstractGlowRing extends DescribedItem implements ICurioItem {
 
     private final String effectKey;
 
-    protected AbstractGlowRing(Item.Properties properties, String effectKey) {
-        super(properties);
+    protected AbstractGlowRing(Item.Properties properties, String effectKey, String descriptionKey) {
+        super(properties, descriptionKey);
         this.effectKey = effectKey;
     }
 
@@ -25,6 +25,8 @@ public abstract class AbstractGlowRing extends Item implements ICurioItem {
     public void appendHoverText(ItemStack stack, Item.TooltipContext context,
                                 List<Component> tooltip, TooltipFlag flag) {
         super.appendHoverText(stack, context, tooltip, flag);
+        // 描述与安装提示之间空一行
+        tooltip.add(Component.empty());
         // 前置提示（物品备注）
         // 注意：不要用 \n —— NeoForge 只在文本需要自动换行时才拆分换行符，短文本里的 \n 会原样显示。
         tooltip.add(Component.translatable("tooltip.stardewaccessories.requires_lambdynlights")

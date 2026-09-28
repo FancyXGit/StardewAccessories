@@ -15,10 +15,10 @@ import top.fancyflow.stardewaccessories.config.Config;
 import top.theillusivec4.curios.api.SlotContext;
 import top.theillusivec4.curios.api.type.capability.ICurioItem;
 
-public class RubyRing extends Item implements ICurioItem {
+public class RubyRing extends DescribedItem implements ICurioItem {
 
     public RubyRing(Item.Properties properties) {
-        super(properties);
+        super(properties, "tooltip.stardewaccessories.ruby_ring.desc");
     }
 
     @Override

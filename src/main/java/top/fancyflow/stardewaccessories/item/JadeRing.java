@@ -16,10 +16,10 @@ import top.theillusivec4.curios.api.SlotContext;
 import top.theillusivec4.curios.api.type.capability.ICurioItem;
 
 // 翡翠戒指：暴击伤害 +10%（效果见 CriticalHitEvents）
-public class JadeRing extends Item implements ICurioItem {
+public class JadeRing extends DescribedItem implements ICurioItem {
 
     public JadeRing(Item.Properties properties) {
-        super(properties);
+        super(properties, "tooltip.stardewaccessories.jade_ring.desc");
     }
 
     @Override

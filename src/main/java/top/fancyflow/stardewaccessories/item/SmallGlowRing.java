@@ -6,6 +6,7 @@ import net.minecraft.world.item.Item;
 public class SmallGlowRing extends AbstractGlowRing {
 
     public SmallGlowRing(Item.Properties properties) {
-        super(properties, "tooltip.stardewaccessories.small_glow_ring");
+        super(properties, "tooltip.stardewaccessories.small_glow_ring",
+                "tooltip.stardewaccessories.small_glow_ring.desc");
     }
 }

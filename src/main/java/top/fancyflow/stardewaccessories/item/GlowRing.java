@@ -6,6 +6,7 @@ import net.minecraft.world.item.Item;
 public class GlowRing extends AbstractGlowRing {
 
     public GlowRing(Item.Properties properties) {
-        super(properties, "tooltip.stardewaccessories.glow_ring");
+        super(properties, "tooltip.stardewaccessories.glow_ring",
+                "tooltip.stardewaccessories.glow_ring.desc");
     }
 }

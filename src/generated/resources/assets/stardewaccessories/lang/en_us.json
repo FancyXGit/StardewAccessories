@@ -21,8 +21,18 @@
   "item.stardewaccessories.topaz": "Topaz",
   "item.stardewaccessories.topaz_ring": "Topaz Ring",
   "itemGroup.stardewaccessories": "Stardew Accessories",
+  "tooltip.stardewaccessories.amethyst_ring.desc": "Enchanted amethyst, giving every blow a stubborn shove",
+  "tooltip.stardewaccessories.aquamarine_ring.desc": "A drop of enchanted sea, leaving no weak point hidden",
+  "tooltip.stardewaccessories.emerald_ring.desc": "An enchanted emerald, quickening the rhythm of your strikes",
   "tooltip.stardewaccessories.glow_ring": "Brightly lights up the area around you",
+  "tooltip.stardewaccessories.glow_ring.desc": "A bright, steady light to see you through the night",
+  "tooltip.stardewaccessories.jade_ring.desc": "A sharp edge sleeps within the smooth jade",
+  "tooltip.stardewaccessories.lumenite_ring_blank.desc": "A lumenite band, still holding a trace of light",
   "tooltip.stardewaccessories.not_installed": "No effect when not installed",
   "tooltip.stardewaccessories.requires_lambdynlights": "Requires LambDynamicLights",
-  "tooltip.stardewaccessories.small_glow_ring": "Slightly lights up the area around you"
+  "tooltip.stardewaccessories.ring_blank.desc": "A plain band, waiting for a gem",
+  "tooltip.stardewaccessories.ruby_ring.desc": "An enchanted ruby, putting more weight behind every swing",
+  "tooltip.stardewaccessories.small_glow_ring": "Slightly lights up the area around you",
+  "tooltip.stardewaccessories.small_glow_ring.desc": "A tiny light, glowing softly in the dark",
+  "tooltip.stardewaccessories.topaz_ring.desc": "You feel a little bit safer wearing this"
 }

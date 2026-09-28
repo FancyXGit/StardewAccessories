@@ -16,10 +16,10 @@ import top.theillusivec4.curios.api.SlotContext;
 import top.theillusivec4.curios.api.type.capability.ICurioItem;
 
 // 紫水晶戒指：攻击击退 +1 点（约等于击退附魔 I）
-public class AmethystRing extends Item implements ICurioItem {
+public class AmethystRing extends DescribedItem implements ICurioItem {
 
     public AmethystRing(Item.Properties properties) {
-        super(properties);
+        super(properties, "tooltip.stardewaccessories.amethyst_ring.desc");
     }
 
     @Override

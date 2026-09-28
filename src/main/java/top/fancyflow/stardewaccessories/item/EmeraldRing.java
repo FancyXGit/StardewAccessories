@@ -13,10 +13,10 @@ import top.fancyflow.stardewaccessories.config.Config;
 import top.theillusivec4.curios.api.SlotContext;
 import top.theillusivec4.curios.api.type.capability.ICurioItem;
 
-public class EmeraldRing extends Item implements ICurioItem {
+public class EmeraldRing extends DescribedItem implements ICurioItem {
 
     public EmeraldRing(Item.Properties properties) {
-        super(properties);
+        super(properties, "tooltip.stardewaccessories.emerald_ring.desc");
     }
 
     @Override

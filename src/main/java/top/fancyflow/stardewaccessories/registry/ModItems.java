@@ -8,6 +8,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import top.fancyflow.stardewaccessories.StardewAccessories;
 import top.fancyflow.stardewaccessories.item.AmethystRing;
 import top.fancyflow.stardewaccessories.item.AquamarineRing;
+import top.fancyflow.stardewaccessories.item.DescribedItem;
 import top.fancyflow.stardewaccessories.item.EmeraldRing;
 import top.fancyflow.stardewaccessories.item.GlowRing;
 import top.fancyflow.stardewaccessories.item.JadeRing;
@@ -25,7 +26,9 @@ public class ModItems {
 
     // 材料
     // 空白戒指
-    public static final DeferredItem<Item> RING_BLANK = ITEMS.registerSimpleItem("ring_blank", new Item.Properties());
+    public static final DeferredItem<DescribedItem> RING_BLANK = ITEMS.registerItem("ring_blank",
+            properties -> new DescribedItem(properties, "tooltip.stardewaccessories.ring_blank.desc"),
+            new Item.Properties());
     // 红宝石
     public static final DeferredItem<Item> RUBY = ITEMS.registerSimpleItem("ruby", new Item.Properties());
     // 绿宝石
@@ -43,7 +46,9 @@ public class ModItems {
     // 流明晶（由 4 个流明尘合成）
     public static final DeferredItem<Item> LUMENITE = ITEMS.registerSimpleItem("lumenite", new Item.Properties());
     // 流明空白戒指（材料）
-    public static final DeferredItem<Item> LUMENITE_RING_BLANK = ITEMS.registerSimpleItem("lumenite_ring_blank", new Item.Properties());
+    public static final DeferredItem<DescribedItem> LUMENITE_RING_BLANK = ITEMS.registerItem("lumenite_ring_blank",
+            properties -> new DescribedItem(properties, "tooltip.stardewaccessories.lumenite_ring_blank.desc"),
+            new Item.Properties());
 
     // 戒指
     // 红宝石戒指：加10%伤害；不可堆叠
