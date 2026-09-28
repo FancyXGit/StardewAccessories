@@ -15,7 +15,7 @@ import top.fancyflow.stardewaccessories.registry.ModAttributes;
 import top.theillusivec4.curios.api.SlotContext;
 import top.theillusivec4.curios.api.type.capability.ICurioItem;
 
-// 海蓝宝石戒指：暴击率 +5%（效果见 CritChanceEvents）
+// 海蓝宝石戒指：暴击率 +5%（效果见 CriticalHitEvents）
 public class AquamarineRing extends Item implements ICurioItem {
 
     public AquamarineRing(Item.Properties properties) {

@@ -1,5 +1,6 @@
 {
   "attribute.name.stardewaccessories.crit_chance": "Critical Chance",
+  "attribute.name.stardewaccessories.crit_damage": "Critical Damage",
   "item.stardewaccessories.aquamarine": "Aquamarine",
   "item.stardewaccessories.aquamarine_ring": "Aquamarine Ring",
   "item.stardewaccessories.chicken": "Golden Chicken",
@@ -10,6 +11,5 @@
   "item.stardewaccessories.ring_blank": "Ring Blank",
   "item.stardewaccessories.ruby": "Ruby",
   "item.stardewaccessories.ruby_ring": "Ruby Ring",
-  "itemGroup.stardewaccessories": "Stardew Accessories",
-  "tooltip.stardewaccessories.jade_ring": "+%s Critical Damage"
+  "itemGroup.stardewaccessories": "Stardew Accessories"
 }
