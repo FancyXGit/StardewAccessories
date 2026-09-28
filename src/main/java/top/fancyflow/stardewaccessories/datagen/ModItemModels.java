@@ -15,7 +15,7 @@ public class ModItemModels extends ItemModelProvider {
     @Override
     protected void registerModels() {
         // 新增普通物品时，在这里加一行
-
+        basicItem(StardewAccessories.CHICKEN.get());
         // 方块物品的模型由 ModBlockStates 的 simpleBlockWithItem 生成，不要在这里重复写
     }
 }

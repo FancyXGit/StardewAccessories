@@ -14,5 +14,6 @@ public class ModLanguageEnglish extends LanguageProvider {
     @Override
     protected void addTranslations() {
         add("itemGroup.stardewaccessories", "Stardew Accessories");
+        add(StardewAccessories.CHICKEN.get(), "Golden Chicken");
     }
 }

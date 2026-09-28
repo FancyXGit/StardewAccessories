@@ -4,8 +4,10 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.slf4j.Logger;
 
@@ -29,21 +31,24 @@ public class StardewAccessories {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
-/*
+
+    public static final DeferredItem<Item> CHICKEN = ITEMS.registerSimpleItem("chicken", new Item.Properties());
+
+
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> STARDEW_ACCESSORIES_TAB =
             CREATIVE_MODE_TABS.register("stardewaccessories", () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.stardewaccessories"))
                     // 排在原版"材料"页签后面
                     .withTabsBefore(CreativeModeTabs.INGREDIENTS)
                     // 页签图标
-                    .icon(() -> new ItemStack()) // TODO: 添加图标
+                    .icon(() -> new ItemStack(CHICKEN.get()))
                     // 决定这个页签里显示哪些物品（顺序即显示顺序）
                     .displayItems((params, output) -> {
-                        // TODO: 添加物品
+                        output.accept(CHICKEN.get());
                     })
                     .build());
 
- */
+
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.

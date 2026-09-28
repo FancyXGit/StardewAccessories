@@ -14,5 +14,6 @@ public class ModLanguageChinese extends LanguageProvider {
     @Override
     protected void addTranslations() {
         add("itemGroup.stardewaccessories", "星露谷饰品");
+        add(StardewAccessories.CHICKEN.get(), "可爱小鸡");
     }
 }
