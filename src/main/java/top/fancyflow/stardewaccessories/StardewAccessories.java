@@ -9,6 +9,7 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.config.ModConfig;
 import top.fancyflow.stardewaccessories.config.Config;
+import top.fancyflow.stardewaccessories.registry.ModAttributes;
 import top.fancyflow.stardewaccessories.registry.ModBlocks;
 import top.fancyflow.stardewaccessories.registry.ModCreativeTabs;
 import top.fancyflow.stardewaccessories.registry.ModItems;
@@ -25,6 +26,7 @@ public class StardewAccessories {
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public StardewAccessories(IEventBus modEventBus, ModContainer modContainer) {
         // 各注册表统一在这里接入模组事件总线
+        ModAttributes.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModCreativeTabs.register(modEventBus);

@@ -46,5 +46,12 @@ public class ModRecipes extends RecipeProvider {
                 .requires(ModItems.JADE.get())
                 .unlockedBy("has_jade", has(ModItems.JADE.get()))
                 .save(recipeOutput);
+
+        // 无序合成： 空白戒指 + 海蓝宝石 = 海蓝宝石戒指
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.AQUAMARINE_RING.get())
+                .requires(ModItems.RING_BLANK.get())
+                .requires(ModItems.AQUAMARINE.get())
+                .unlockedBy("has_aquamarine", has(ModItems.AQUAMARINE.get()))
+                .save(recipeOutput);
     }
 }

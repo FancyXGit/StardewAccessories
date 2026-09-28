@@ -15,6 +15,7 @@ public class ModLanguageEnglish extends LanguageProvider {
     @Override
     protected void addTranslations() {
         add("itemGroup.stardewaccessories", "Stardew Accessories");
+        add("attribute.name.stardewaccessories.crit_chance", "Critical Chance");
         add("tooltip.stardewaccessories.jade_ring", "+%s Critical Damage");
         add(ModItems.CHICKEN.get(), "Golden Chicken");
 
@@ -22,9 +23,11 @@ public class ModLanguageEnglish extends LanguageProvider {
         add(ModItems.RUBY.get(), "Ruby");
         add(ModItems.EMERALD.get(), "Emerald");
         add(ModItems.JADE.get(), "Jade");
+        add(ModItems.AQUAMARINE.get(), "Aquamarine");
 
         add(ModItems.RUBY_RING.get(), "Ruby Ring");
         add(ModItems.EMERALD_RING.get(), "Emerald Ring");
         add(ModItems.JADE_RING.get(), "Jade Ring");
+        add(ModItems.AQUAMARINE_RING.get(), "Aquamarine Ring");
     }
 }

@@ -33,11 +33,13 @@ public class ModCreativeTabs {
                         output.accept(ModItems.RUBY.get());
                         output.accept(ModItems.EMERALD.get());
                         output.accept(ModItems.JADE.get());
+                        output.accept(ModItems.AQUAMARINE.get());
 
                         // 戒指
                         output.accept(ModItems.RUBY_RING.get());
                         output.accept(ModItems.EMERALD_RING.get());
                         output.accept(ModItems.JADE_RING.get());
+                        output.accept(ModItems.AQUAMARINE_RING.get());
                     })
                     .build());
 

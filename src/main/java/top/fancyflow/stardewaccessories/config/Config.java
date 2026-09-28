@@ -18,5 +18,9 @@ public class Config {
             .comment("翡翠戒指的额外暴击伤害，加到暴击倍率上（0.10 = 暴击倍率 1.5 -> 1.6）")
             .defineInRange("jadeRingCritDamage", 0.10, 0.0, 1024.0);
 
+    public static final ModConfigSpec.DoubleValue AQUAMARINE_RING_CRIT_CHANCE = BUILDER
+            .comment("海蓝宝石戒指的额外暴击率（0.05 = +5%）")
+            .defineInRange("aquamarineRingCritChance", 0.05, 0.0, 1.0);
+
     public static final ModConfigSpec SPEC = BUILDER.build();
 }

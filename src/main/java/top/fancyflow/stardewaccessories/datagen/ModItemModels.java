@@ -24,11 +24,13 @@ public class ModItemModels extends ItemModelProvider {
         basicItem(ModItems.RUBY.get());
         basicItem(ModItems.EMERALD.get());
         basicItem(ModItems.JADE.get());
+        basicItem(ModItems.AQUAMARINE.get());
 
         // 戒指
         basicItem(ModItems.RUBY_RING.get());
         basicItem(ModItems.EMERALD_RING.get());
         basicItem(ModItems.JADE_RING.get());
+        basicItem(ModItems.AQUAMARINE_RING.get());
         // 方块物品的模型由 ModBlockStates 的 simpleBlockWithItem 生成，不要在这里重复写
     }
 }

@@ -6,6 +6,7 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import top.fancyflow.stardewaccessories.StardewAccessories;
+import top.fancyflow.stardewaccessories.item.AquamarineRing;
 import top.fancyflow.stardewaccessories.item.EmeraldRing;
 import top.fancyflow.stardewaccessories.item.JadeRing;
 import top.fancyflow.stardewaccessories.item.RubyRing;
@@ -27,6 +28,8 @@ public class ModItems {
     public static final DeferredItem<Item> EMERALD = ITEMS.registerSimpleItem("emerald", new Item.Properties());
     // 翡翠
     public static final DeferredItem<Item> JADE = ITEMS.registerSimpleItem("jade", new Item.Properties());
+    // 海蓝宝石
+    public static final DeferredItem<Item> AQUAMARINE = ITEMS.registerSimpleItem("aquamarine", new Item.Properties());
 
     // 戒指
     // 红宝石戒指：加10%伤害；不可堆叠
@@ -35,6 +38,8 @@ public class ModItems {
     public static final DeferredItem<EmeraldRing> EMERALD_RING = ITEMS.registerItem("emerald_ring", EmeraldRing::new, new Item.Properties().stacksTo(1));
     // 翡翠戒指：加10%暴击伤害；不可堆叠
     public static final DeferredItem<JadeRing> JADE_RING = ITEMS.registerItem("jade_ring", JadeRing::new, new Item.Properties().stacksTo(1));
+    // 海蓝宝石戒指：加5%暴击率；不可堆叠
+    public static final DeferredItem<AquamarineRing> AQUAMARINE_RING = ITEMS.registerItem("aquamarine_ring", AquamarineRing::new, new Item.Properties().stacksTo(1));
 
     public static void register(IEventBus modEventBus) {
         ITEMS.register(modEventBus);
