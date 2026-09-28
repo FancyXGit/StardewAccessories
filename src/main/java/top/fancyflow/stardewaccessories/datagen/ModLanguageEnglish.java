@@ -32,6 +32,7 @@ public class ModLanguageEnglish extends LanguageProvider {
         add(ModItems.METAL_RING_BLANK.get(), "Metal Ring Blank");
         add(ModItems.MAGNET_FRAGMENTS.get(), "Magnet Fragments");
         add(ModItems.MAGNET.get(), "Magnet");
+        add(ModItems.SLIME_CRYSTAL.get(), "Slime Crystal");
 
         add(ModItems.RUBY_RING.get(), "Ruby Ring");
         add(ModItems.EMERALD_RING.get(), "Emerald Ring");
@@ -43,11 +44,13 @@ public class ModLanguageEnglish extends LanguageProvider {
         add(ModItems.GLOW_RING.get(), "Glow Ring");
         add(ModItems.SMALL_MAGNET_RING.get(), "Small Magnet Ring");
         add(ModItems.MAGNET_RING.get(), "Magnet Ring");
+        add(ModItems.SLIME_CHARMER_RING.get(), "Slime Charmer Ring");
 
         add("tooltip.stardewaccessories.small_glow_ring", "Slightly lights up the area around you");
         add("tooltip.stardewaccessories.glow_ring", "Brightly lights up the area around you");
         add("tooltip.stardewaccessories.small_magnet_ring", "Attracts nearby items");
         add("tooltip.stardewaccessories.magnet_ring", "Strongly attracts nearby items");
+        add("tooltip.stardewaccessories.slime_charmer_ring", "Slimes and magma cubes cannot hurt you");
         add("tooltip.stardewaccessories.requires_lambdynlights", "Requires LambDynamicLights");
         add("tooltip.stardewaccessories.not_installed", "No effect when not installed");
 
@@ -65,5 +68,6 @@ public class ModLanguageEnglish extends LanguageProvider {
         add("tooltip.stardewaccessories.metal_ring_blank.desc", "A weighty metal band, faintly humming with magnetism");
         add("tooltip.stardewaccessories.small_magnet_ring.desc", "Shards of lodestone set in the band; loose things find their way to you");
         add("tooltip.stardewaccessories.magnet_ring.desc", "A full lodestone face; loose things hurry into your grasp");
+        add("tooltip.stardewaccessories.slime_charmer_ring.desc", "Slimes only want to be your gooey friends now");
     }
 }

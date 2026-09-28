@@ -110,6 +110,13 @@ public class ModRecipes extends RecipeProvider {
                 .unlockedBy("has_magnet_fragments", has(ModItems.MAGNET_FRAGMENTS.get()))
                 .save(recipeOutput);
 
+        // 无序合成： 流明空白戒指 + 史莱姆结晶 = 史莱姆克星戒指
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SLIME_CHARMER_RING.get())
+                .requires(ModItems.LUMENITE_RING_BLANK.get())
+                .requires(ModItems.SLIME_CRYSTAL.get())
+                .unlockedBy("has_slime_crystal", has(ModItems.SLIME_CRYSTAL.get()))
+                .save(recipeOutput);
+
         // 无序合成： 流明空白戒指 + 流明晶 = 光辉戒指
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GLOW_RING.get())
                 .requires(ModItems.LUMENITE_RING_BLANK.get())

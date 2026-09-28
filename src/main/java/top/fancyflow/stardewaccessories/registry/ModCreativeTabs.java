@@ -37,6 +37,7 @@ public class ModCreativeTabs {
                         output.accept(ModItems.GLOW_RING.get());
                         output.accept(ModItems.SMALL_MAGNET_RING.get());
                         output.accept(ModItems.MAGNET_RING.get());
+                        output.accept(ModItems.SLIME_CHARMER_RING.get());
 
                         // 标志
                         output.accept(ModItems.CHICKEN.get());
@@ -57,6 +58,7 @@ public class ModCreativeTabs {
                         output.accept(ModItems.LUMENITE.get());
                         output.accept(ModItems.MAGNET_FRAGMENTS.get());
                         output.accept(ModItems.MAGNET.get());
+                        output.accept(ModItems.SLIME_CRYSTAL.get());
 
                     })
                     .build());

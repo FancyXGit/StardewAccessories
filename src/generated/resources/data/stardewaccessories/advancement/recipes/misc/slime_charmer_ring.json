@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_slime_crystal": {
+      "conditions": {
+        "items": [
+          {
+            "items": "stardewaccessories:slime_crystal"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "stardewaccessories:slime_charmer_ring"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_slime_crystal"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "stardewaccessories:slime_charmer_ring"
+    ]
+  }
+}

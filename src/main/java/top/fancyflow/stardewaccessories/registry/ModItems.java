@@ -14,6 +14,7 @@ import top.fancyflow.stardewaccessories.item.GlowRing;
 import top.fancyflow.stardewaccessories.item.JadeRing;
 import top.fancyflow.stardewaccessories.item.MagnetRing;
 import top.fancyflow.stardewaccessories.item.RubyRing;
+import top.fancyflow.stardewaccessories.item.SlimeCharmerRing;
 import top.fancyflow.stardewaccessories.item.SmallGlowRing;
 import top.fancyflow.stardewaccessories.item.SmallMagnetRing;
 import top.fancyflow.stardewaccessories.item.TopazRing;
@@ -59,6 +60,8 @@ public class ModItems {
     public static final DeferredItem<Item> MAGNET_FRAGMENTS = ITEMS.registerSimpleItem("magnet_fragments", new Item.Properties());
     // 磁石（由 4 个磁石碎块合成）
     public static final DeferredItem<Item> MAGNET = ITEMS.registerSimpleItem("magnet", new Item.Properties());
+    // 史莱姆结晶（暂时只能从创造栏获取，来源以后再定）
+    public static final DeferredItem<Item> SLIME_CRYSTAL = ITEMS.registerSimpleItem("slime_crystal", new Item.Properties());
 
     // 戒指
     // 红宝石戒指：加10%伤害；不可堆叠
@@ -81,6 +84,8 @@ public class ModItems {
     public static final DeferredItem<SmallMagnetRing> SMALL_MAGNET_RING = ITEMS.registerItem("small_magnet_ring", SmallMagnetRing::new, new Item.Properties().stacksTo(1));
     // 磁铁戒指：佩戴后把更大范围内的掉落物吸向玩家；不可堆叠
     public static final DeferredItem<MagnetRing> MAGNET_RING = ITEMS.registerItem("magnet_ring", MagnetRing::new, new Item.Properties().stacksTo(1));
+    // 史莱姆克星戒指：佩戴后史莱姆和岩浆怪不再造成伤害；不可堆叠
+    public static final DeferredItem<SlimeCharmerRing> SLIME_CHARMER_RING = ITEMS.registerItem("slime_charmer_ring", SlimeCharmerRing::new, new Item.Properties().stacksTo(1));
 
     public static void register(IEventBus modEventBus) {
         ITEMS.register(modEventBus);

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "stardewaccessories:lumenite_ring_blank"
+    },
+    {
+      "item": "stardewaccessories:slime_crystal"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "stardewaccessories:slime_charmer_ring"
+  }
+}
