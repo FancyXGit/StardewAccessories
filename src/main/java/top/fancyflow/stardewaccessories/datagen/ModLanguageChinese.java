@@ -4,6 +4,7 @@ import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.LanguageProvider;
 
 import top.fancyflow.stardewaccessories.StardewAccessories;
+import top.fancyflow.stardewaccessories.registry.ModItems;
 
 // 生成 assets/stardewaccessories/lang/zh_cn.json
 public class ModLanguageChinese extends LanguageProvider {
@@ -14,11 +15,11 @@ public class ModLanguageChinese extends LanguageProvider {
     @Override
     protected void addTranslations() {
         add("itemGroup.stardewaccessories", "星露谷饰品");
-        add(StardewAccessories.CHICKEN.get(), "可爱小鸡");
+        add(ModItems.CHICKEN.get(), "可爱小鸡");
 
-        add(StardewAccessories.RING_BLANK.get(), "空白戒指");
-        add(StardewAccessories.RUBY.get(), "红宝石");
+        add(ModItems.RING_BLANK.get(), "空白戒指");
+        add(ModItems.RUBY.get(), "红宝石");
 
-        add(StardewAccessories.RUBY_RING.get(), "红宝石戒指");
+        add(ModItems.RUBY_RING.get(), "红宝石戒指");
     }
 }

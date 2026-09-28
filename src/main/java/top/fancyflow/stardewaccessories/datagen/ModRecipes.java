@@ -15,7 +15,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
-import top.fancyflow.stardewaccessories.StardewAccessories;
+import top.fancyflow.stardewaccessories.registry.ModItems;
 
 // 生成 data/stardewaccessories/recipe/*.json 以及配方书解锁进度
 public class ModRecipes extends RecipeProvider {
@@ -27,10 +27,10 @@ public class ModRecipes extends RecipeProvider {
     protected void buildRecipes(RecipeOutput recipeOutput) {
 
         // 无序合成： 空白戒指 + 红宝石 = 红宝石戒指
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, StardewAccessories.RUBY_RING.get())
-                .requires(StardewAccessories.RING_BLANK.get())
-                .requires(StardewAccessories.RUBY.get())
-                .unlockedBy("has_ring_blank", has(StardewAccessories.RING_BLANK.get()))
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RUBY_RING.get())
+                .requires(ModItems.RING_BLANK.get())
+                .requires(ModItems.RUBY.get())
+                .unlockedBy("has_ring_blank", has(ModItems.RING_BLANK.get()))
                 .save(recipeOutput);
     }
 }

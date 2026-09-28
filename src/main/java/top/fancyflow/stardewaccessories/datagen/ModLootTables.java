@@ -13,7 +13,7 @@ import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 
-import top.fancyflow.stardewaccessories.StardewAccessories;
+import top.fancyflow.stardewaccessories.registry.ModBlocks;
 
 // 生成 data/stardewaccessories/loot_table/blocks/*.json
 public class ModLootTables extends LootTableProvider {
@@ -35,7 +35,7 @@ public class ModLootTables extends LootTableProvider {
 
         @Override
         protected Iterable<Block> getKnownBlocks() {
-            return StardewAccessories.BLOCKS.getEntries().stream().map(Holder::value)::iterator;
+            return ModBlocks.BLOCKS.getEntries().stream().map(Holder::value)::iterator;
         }
     }
 }
