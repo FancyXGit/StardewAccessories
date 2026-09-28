@@ -7,6 +7,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
@@ -31,7 +32,11 @@ public class DataGenerators {
         // 服务端数据：配方、掉落表、标签
         generator.addProvider(event.includeServer(), new ModRecipes(output, lookupProvider));
         generator.addProvider(event.includeServer(), new ModLootTables(output, lookupProvider));
-        generator.addProvider(event.includeServer(), new ModBlockTags(output, lookupProvider, existingFileHelper));
+        // 物品标签要用方块标签生成器的 contentsGetter()，所以先建出来
+        BlockTagsProvider blockTags = new ModBlockTags(output, lookupProvider, existingFileHelper);
+        generator.addProvider(event.includeServer(), blockTags);
+        generator.addProvider(event.includeServer(),
+                new ModItemTags(output, lookupProvider, blockTags.contentsGetter(), existingFileHelper));
 
         // 服务端数据：世界生成（矿石自然生成）
         generator.addProvider(event.includeServer(), new ModWorldGen(output, lookupProvider));

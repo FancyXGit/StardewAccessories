@@ -16,6 +16,7 @@ import com.mojang.logging.LogUtils;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.ModContainer;
+import top.fancyflow.stardewaccessories.item.RubyRing;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(StardewAccessories.MODID)
@@ -31,9 +32,15 @@ public class StardewAccessories {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
-
+    // 鸡图标
     public static final DeferredItem<Item> CHICKEN = ITEMS.registerSimpleItem("chicken", new Item.Properties());
 
+    // 材料
+    
+
+    // 戒指
+    // 红宝石戒指：加10%伤害
+    public static final DeferredItem<RubyRing> RUBY_RING = ITEMS.registerItem("ruby_ring", RubyRing::new, new Item.Properties());
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> STARDEW_ACCESSORIES_TAB =
             CREATIVE_MODE_TABS.register("stardewaccessories", () -> CreativeModeTab.builder()
@@ -45,6 +52,7 @@ public class StardewAccessories {
                     // 决定这个页签里显示哪些物品（顺序即显示顺序）
                     .displayItems((params, output) -> {
                         output.accept(CHICKEN.get());
+                        output.accept(RUBY_RING.get());
                     })
                     .build());
 

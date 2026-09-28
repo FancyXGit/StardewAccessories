@@ -15,5 +15,6 @@ public class ModLanguageEnglish extends LanguageProvider {
     protected void addTranslations() {
         add("itemGroup.stardewaccessories", "Stardew Accessories");
         add(StardewAccessories.CHICKEN.get(), "Golden Chicken");
+        add(StardewAccessories.RUBY_RING.get(), "Ruby Ring");
     }
 }
