@@ -26,10 +26,10 @@ public class ModItems {
     public static final DeferredItem<Item> EMERALD = ITEMS.registerSimpleItem("emerald", new Item.Properties());
 
     // 戒指
-    // 红宝石戒指：加10%伤害
-    public static final DeferredItem<RubyRing> RUBY_RING = ITEMS.registerItem("ruby_ring", RubyRing::new, new Item.Properties());
-    // 绿宝石戒指：加10%攻速
-    public static final DeferredItem<EmeraldRing> EMERALD_RING = ITEMS.registerItem("emerald_ring", EmeraldRing::new, new Item.Properties());
+    // 红宝石戒指：加10%伤害；不可堆叠
+    public static final DeferredItem<RubyRing> RUBY_RING = ITEMS.registerItem("ruby_ring", RubyRing::new, new Item.Properties().stacksTo(1));
+    // 绿宝石戒指：加10%攻速；不可堆叠
+    public static final DeferredItem<EmeraldRing> EMERALD_RING = ITEMS.registerItem("emerald_ring", EmeraldRing::new, new Item.Properties().stacksTo(1));
 
     public static void register(IEventBus modEventBus) {
         ITEMS.register(modEventBus);
