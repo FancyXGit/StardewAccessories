@@ -40,5 +40,13 @@ public class Config {
                     + "LambDynamicLights 会把 15 级光压缩到约 7.75 格")
             .defineInRange("glowRingLight", 15, 0, 15);
 
+    public static final ModConfigSpec.DoubleValue SMALL_MAGNET_RING_RANGE = BUILDER
+            .comment("小型磁铁戒指的吸取半径（格）：把周围这个范围内的掉落物吸向玩家")
+            .defineInRange("smallMagnetRingRange", 3.0, 0.0, 64.0);
+
+    public static final ModConfigSpec.DoubleValue SMALL_MAGNET_RING_PULL_SPEED = BUILDER
+            .comment("小型磁铁戒指吸物品的最大速度（格/tick，1.0 约等于每秒 20 格）")
+            .defineInRange("smallMagnetRingPullSpeed", 1.0, 0.0, 16.0);
+
     public static final ModConfigSpec SPEC = BUILDER.build();
 }

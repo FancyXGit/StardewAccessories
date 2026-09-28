@@ -30,6 +30,8 @@ public class ModItemModels extends ItemModelProvider {
         basicItem(ModItems.LUMEN_DUST.get());
         basicItem(ModItems.LUMENITE.get());
         basicItem(ModItems.LUMENITE_RING_BLANK.get());
+        basicItem(ModItems.METAL_RING_BLANK.get());
+        basicItem(ModItems.MAGNET_FRAGMENTS.get());
 
         // 戒指
         basicItem(ModItems.RUBY_RING.get());
@@ -40,6 +42,7 @@ public class ModItemModels extends ItemModelProvider {
         basicItem(ModItems.AMETHYST_RING.get());
         basicItem(ModItems.SMALL_GLOW_RING.get());
         basicItem(ModItems.GLOW_RING.get());
+        basicItem(ModItems.SMALL_MAGNET_RING.get());
         // 方块物品的模型由 ModBlockStates 的 simpleBlockWithItem 生成，不要在这里重复写
     }
 }

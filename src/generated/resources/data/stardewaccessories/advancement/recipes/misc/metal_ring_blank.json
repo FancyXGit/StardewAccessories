@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ring_blank": {
+      "conditions": {
+        "items": [
+          {
+            "items": "stardewaccessories:ring_blank"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "stardewaccessories:metal_ring_blank"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_ring_blank"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "stardewaccessories:metal_ring_blank"
+    ]
+  }
+}

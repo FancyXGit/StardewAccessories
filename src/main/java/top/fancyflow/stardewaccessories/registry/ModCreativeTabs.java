@@ -35,13 +35,17 @@ public class ModCreativeTabs {
                         output.accept(ModItems.AMETHYST_RING.get());
                         output.accept(ModItems.SMALL_GLOW_RING.get());
                         output.accept(ModItems.GLOW_RING.get());
+                        output.accept(ModItems.SMALL_MAGNET_RING.get());
 
                         // 标志
                         output.accept(ModItems.CHICKEN.get());
 
                         // 材料
+                        // 戒指底座
                         output.accept(ModItems.RING_BLANK.get());
                         output.accept(ModItems.LUMENITE_RING_BLANK.get());
+                        output.accept(ModItems.METAL_RING_BLANK.get());
+                        // 矿石材料
                         output.accept(ModItems.RUBY.get());
                         output.accept(ModItems.EMERALD.get());
                         output.accept(ModItems.JADE.get());
@@ -50,6 +54,7 @@ public class ModCreativeTabs {
                         output.accept(ModItems.AMETHYST.get());
                         output.accept(ModItems.LUMEN_DUST.get());
                         output.accept(ModItems.LUMENITE.get());
+                        output.accept(ModItems.MAGNET_FRAGMENTS.get());
 
                     })
                     .build());

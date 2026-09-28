@@ -14,6 +14,7 @@ import top.fancyflow.stardewaccessories.item.GlowRing;
 import top.fancyflow.stardewaccessories.item.JadeRing;
 import top.fancyflow.stardewaccessories.item.RubyRing;
 import top.fancyflow.stardewaccessories.item.SmallGlowRing;
+import top.fancyflow.stardewaccessories.item.SmallMagnetRing;
 import top.fancyflow.stardewaccessories.item.TopazRing;
 
 // 所有物品的注册集中在这里；新增物品时在对应分组下加一行
@@ -49,6 +50,12 @@ public class ModItems {
     public static final DeferredItem<DescribedItem> LUMENITE_RING_BLANK = ITEMS.registerItem("lumenite_ring_blank",
             properties -> new DescribedItem(properties, "tooltip.stardewaccessories.lumenite_ring_blank.desc"),
             new Item.Properties());
+    // 金属空白戒指（材料）
+    public static final DeferredItem<DescribedItem> METAL_RING_BLANK = ITEMS.registerItem("metal_ring_blank",
+            properties -> new DescribedItem(properties, "tooltip.stardewaccessories.metal_ring_blank.desc"),
+            new Item.Properties());
+    // 磁石碎块（暂时只能从创造栏获取，来源以后再定）
+    public static final DeferredItem<Item> MAGNET_FRAGMENTS = ITEMS.registerSimpleItem("magnet_fragments", new Item.Properties());
 
     // 戒指
     // 红宝石戒指：加10%伤害；不可堆叠
@@ -67,6 +74,8 @@ public class ModItems {
     public static final DeferredItem<SmallGlowRing> SMALL_GLOW_RING = ITEMS.registerItem("small_glow_ring", SmallGlowRing::new, new Item.Properties().stacksTo(1));
     // 光辉戒指：佩戴后客户端动态照明（更亮）；不可堆叠
     public static final DeferredItem<GlowRing> GLOW_RING = ITEMS.registerItem("glow_ring", GlowRing::new, new Item.Properties().stacksTo(1));
+    // 小型磁铁戒指：佩戴后把附近的掉落物吸向玩家；不可堆叠
+    public static final DeferredItem<SmallMagnetRing> SMALL_MAGNET_RING = ITEMS.registerItem("small_magnet_ring", SmallMagnetRing::new, new Item.Properties().stacksTo(1));
 
     public static void register(IEventBus modEventBus) {
         ITEMS.register(modEventBus);

@@ -84,6 +84,20 @@ public class ModRecipes extends RecipeProvider {
                 .unlockedBy("has_lumen_dust", has(ModItems.LUMEN_DUST.get()))
                 .save(recipeOutput);
 
+        // 无序合成： 空白戒指 + 2 个铁锭 = 金属空白戒指
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.METAL_RING_BLANK.get())
+                .requires(ModItems.RING_BLANK.get())
+                .requires(Items.IRON_INGOT, 2)
+                .unlockedBy("has_ring_blank", has(ModItems.RING_BLANK.get()))
+                .save(recipeOutput);
+
+        // 无序合成： 金属空白戒指 + 磁石碎块 = 小型磁铁戒指
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SMALL_MAGNET_RING.get())
+                .requires(ModItems.METAL_RING_BLANK.get())
+                .requires(ModItems.MAGNET_FRAGMENTS.get())
+                .unlockedBy("has_magnet_fragments", has(ModItems.MAGNET_FRAGMENTS.get()))
+                .save(recipeOutput);
+
         // 无序合成： 4 个流明尘 = 流明晶
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.LUMENITE.get())
                 .requires(ModItems.LUMEN_DUST.get(), 4)

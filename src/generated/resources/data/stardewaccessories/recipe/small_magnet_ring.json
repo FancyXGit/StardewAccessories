@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "stardewaccessories:metal_ring_blank"
+    },
+    {
+      "item": "stardewaccessories:magnet_fragments"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "stardewaccessories:small_magnet_ring"
+  }
+}
