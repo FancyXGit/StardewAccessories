@@ -26,6 +26,13 @@ public class ModCreativeTabs {
                     .icon(() -> new ItemStack(ModItems.CHICKEN.get()))
                     // 决定这个页签里显示哪些物品（顺序即显示顺序）
                     .displayItems((params, output) -> {
+                        // 戒指
+                        output.accept(ModItems.RUBY_RING.get());
+                        output.accept(ModItems.EMERALD_RING.get());
+                        output.accept(ModItems.JADE_RING.get());
+                        output.accept(ModItems.AQUAMARINE_RING.get());
+
+                        // 标志
                         output.accept(ModItems.CHICKEN.get());
 
                         // 材料
@@ -35,11 +42,6 @@ public class ModCreativeTabs {
                         output.accept(ModItems.JADE.get());
                         output.accept(ModItems.AQUAMARINE.get());
 
-                        // 戒指
-                        output.accept(ModItems.RUBY_RING.get());
-                        output.accept(ModItems.EMERALD_RING.get());
-                        output.accept(ModItems.JADE_RING.get());
-                        output.accept(ModItems.AQUAMARINE_RING.get());
                     })
                     .build());
 
