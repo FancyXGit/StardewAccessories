@@ -26,5 +26,11 @@ public class ModRecipes extends RecipeProvider {
     @Override
     protected void buildRecipes(RecipeOutput recipeOutput) {
 
+        // 无序合成： 空白戒指 + 红宝石 = 红宝石戒指
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, StardewAccessories.RUBY_RING.get())
+                .requires(StardewAccessories.RING_BLANK.get())
+                .requires(StardewAccessories.RUBY.get())
+                .unlockedBy("has_ring_blank", has(StardewAccessories.RING_BLANK.get()))
+                .save(recipeOutput);
     }
 }

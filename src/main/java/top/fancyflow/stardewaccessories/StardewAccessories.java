@@ -36,7 +36,10 @@ public class StardewAccessories {
     public static final DeferredItem<Item> CHICKEN = ITEMS.registerSimpleItem("chicken", new Item.Properties());
 
     // 材料
-    
+    // 空白戒指
+    public static final DeferredItem<Item> RING_BLANK = ITEMS.registerSimpleItem("ring_blank", new Item.Properties());
+    // 红宝石
+    public static final DeferredItem<Item> RUBY = ITEMS.registerSimpleItem("ruby", new Item.Properties());
 
     // 戒指
     // 红宝石戒指：加10%伤害
@@ -51,8 +54,16 @@ public class StardewAccessories {
                     .icon(() -> new ItemStack(CHICKEN.get()))
                     // 决定这个页签里显示哪些物品（顺序即显示顺序）
                     .displayItems((params, output) -> {
-                        output.accept(CHICKEN.get());
+                        // 戒指
                         output.accept(RUBY_RING.get());
+
+                        // 徽标
+                        output.accept(CHICKEN.get());
+
+                        // 材料
+                        output.accept(RING_BLANK.get());
+                        output.accept(RUBY.get());
+
                     })
                     .build());
 

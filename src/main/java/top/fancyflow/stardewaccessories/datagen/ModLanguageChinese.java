@@ -15,6 +15,10 @@ public class ModLanguageChinese extends LanguageProvider {
     protected void addTranslations() {
         add("itemGroup.stardewaccessories", "星露谷饰品");
         add(StardewAccessories.CHICKEN.get(), "可爱小鸡");
+
+        add(StardewAccessories.RING_BLANK.get(), "空白戒指");
+        add(StardewAccessories.RUBY.get(), "红宝石");
+
         add(StardewAccessories.RUBY_RING.get(), "红宝石戒指");
     }
 }

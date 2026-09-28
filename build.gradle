@@ -27,9 +27,16 @@ sourceSets.main.resources {
 
 repositories {
     // Add here additional repositories if required by some of the dependencies below.
+    // 依赖Curios API
     maven {
         name = "Curios"
         url = uri("https://maven.theillusivec4.top/")
+    }
+
+    // JEI仅用于测试不依赖
+    maven {
+        name = "BlameJared"
+        url = uri("https://maven.blamejared.com/")
     }
 }
 
@@ -143,6 +150,9 @@ dependencies {
 
     runtimeOnly "top.theillusivec4.curios:curios-neoforge:${curios_version}"
     compileOnly "top.theillusivec4.curios:curios-neoforge:${curios_version}:api"
+
+    // 本地测试
+    localRuntime "mezz.jei:jei-1.21.1-neoforge:${jei_version}"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
