@@ -10,10 +10,15 @@
   "item.stardewaccessories.emerald_ring": "绿宝石戒指",
   "item.stardewaccessories.jade": "翡翠",
   "item.stardewaccessories.jade_ring": "翡翠戒指",
+  "item.stardewaccessories.lumen_dust": "流明尘",
+  "item.stardewaccessories.lumenite_ring_blank": "流明空白戒指",
   "item.stardewaccessories.ring_blank": "空白戒指",
   "item.stardewaccessories.ruby": "红宝石",
   "item.stardewaccessories.ruby_ring": "红宝石戒指",
+  "item.stardewaccessories.small_glow_ring": "小型光辉戒指",
   "item.stardewaccessories.topaz": "黄水晶",
   "item.stardewaccessories.topaz_ring": "黄水晶戒指",
-  "itemGroup.stardewaccessories": "星露谷饰品"
+  "itemGroup.stardewaccessories": "星露谷饰品",
+  "tooltip.stardewaccessories.small_glow_ring": "略微照亮周围",
+  "tooltip.stardewaccessories.small_glow_ring.requires_lambdynlights": "需要安装 LambDynamicLights\n未安装时不发光"
 }

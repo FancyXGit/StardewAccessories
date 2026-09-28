@@ -33,18 +33,21 @@ public class ModCreativeTabs {
                         output.accept(ModItems.AQUAMARINE_RING.get());
                         output.accept(ModItems.TOPAZ_RING.get());
                         output.accept(ModItems.AMETHYST_RING.get());
+                        output.accept(ModItems.SMALL_GLOW_RING.get());
 
                         // 标志
                         output.accept(ModItems.CHICKEN.get());
 
                         // 材料
                         output.accept(ModItems.RING_BLANK.get());
+                        output.accept(ModItems.LUMENITE_RING_BLANK.get());
                         output.accept(ModItems.RUBY.get());
                         output.accept(ModItems.EMERALD.get());
                         output.accept(ModItems.JADE.get());
                         output.accept(ModItems.AQUAMARINE.get());
                         output.accept(ModItems.TOPAZ.get());
                         output.accept(ModItems.AMETHYST.get());
+                        output.accept(ModItems.LUMEN_DUST.get());
 
                     })
                     .build());

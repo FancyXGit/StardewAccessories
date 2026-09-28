@@ -38,6 +38,12 @@ repositories {
         name = "BlameJared"
         url = uri("https://maven.blamejared.com/")
     }
+
+    // LambDynamicLights（动态光照，软依赖）
+    maven {
+        name = "Gegy"
+        url = uri("https://maven.gegy.dev")
+    }
 }
 
 base {
@@ -125,7 +131,13 @@ configurations {
     runtimeClasspath.extendsFrom localRuntime
 }
 
+// LambDynamicLights 的制品按 Minecraft 映射区分变体，这里指定用 mojmap 变体
+def ldlMappings = org.gradle.api.attributes.Attribute.of("net.minecraft.mappings", String)
+
 dependencies {
+    attributesSchema {
+        attribute(ldlMappings)
+    }
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
     // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"
@@ -150,6 +162,15 @@ dependencies {
 
     runtimeOnly "top.theillusivec4.curios:curios-neoforge:${curios_version}"
     compileOnly "top.theillusivec4.curios:curios-neoforge:${curios_version}:api"
+
+    // LambDynamicLights（动态照明）：API 仅编译用；运行时仅用于开发环境测试。
+    // 属于软依赖——正式包不打包它，玩家没装也不会崩溃，只是小型光辉戒指不发光。
+    compileOnly("dev.lambdaurora.lambdynamiclights:lambdynamiclights-api:${lambdynlights_version}") {
+        attributes { attribute(ldlMappings, "mojmap") }
+    }
+    localRuntime("dev.lambdaurora.lambdynamiclights:lambdynamiclights-runtime:${lambdynlights_version}") {
+        attributes { attribute(ldlMappings, "mojmap") }
+    }
 
     // 本地测试
     localRuntime "mezz.jei:jei-1.21.1-neoforge:${jei_version}"

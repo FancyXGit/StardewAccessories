@@ -34,6 +34,10 @@ description='''
 Bring Stardew Valley's Accessories to Minecraft!
 '''
 
+# LambDynamicLights 的动态光照入口点（软依赖：没装 LambDynamicLights 时这个类不会被加载）
+[modproperties."${mod_id}"."yumi:entrypoints"]
+    "lambdynlights:initializer" = "top.fancyflow.stardewaccessories.client.dynamiclights.StardewDynamicLightsInitializer"
+
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.
 #[[mixins]]
 #config="${mod_id}.mixins.json"
@@ -78,3 +82,11 @@ Bring Stardew Valley's Accessories to Minecraft!
     versionRange="[9.0.0,10.0.0)"
     ordering="AFTER"
     side="BOTH"
+
+# LambDynamicLights（可选，仅客户端）：小型光辉戒指的动态光照
+[[dependencies.${mod_id}]]
+    modId="lambdynlights"
+    type="optional"
+    versionRange="[4.0.0,)"
+    ordering="AFTER"
+    side="CLIENT"

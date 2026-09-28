@@ -10,10 +10,15 @@
   "item.stardewaccessories.emerald_ring": "Emerald Ring",
   "item.stardewaccessories.jade": "Jade",
   "item.stardewaccessories.jade_ring": "Jade Ring",
+  "item.stardewaccessories.lumen_dust": "Lumen Dust",
+  "item.stardewaccessories.lumenite_ring_blank": "Lumen Ring Blank",
   "item.stardewaccessories.ring_blank": "Ring Blank",
   "item.stardewaccessories.ruby": "Ruby",
   "item.stardewaccessories.ruby_ring": "Ruby Ring",
+  "item.stardewaccessories.small_glow_ring": "Small Glow Ring",
   "item.stardewaccessories.topaz": "Topaz",
   "item.stardewaccessories.topaz_ring": "Topaz Ring",
-  "itemGroup.stardewaccessories": "Stardew Accessories"
+  "itemGroup.stardewaccessories": "Stardew Accessories",
+  "tooltip.stardewaccessories.small_glow_ring": "Slightly lights up the area around you",
+  "tooltip.stardewaccessories.small_glow_ring.requires_lambdynlights": "Requires LambDynamicLights\nNo effect when not installed"
 }

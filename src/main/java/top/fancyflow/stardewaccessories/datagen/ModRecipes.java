@@ -67,5 +67,20 @@ public class ModRecipes extends RecipeProvider {
                 .requires(ModItems.AMETHYST.get())
                 .unlockedBy("has_amethyst", has(ModItems.AMETHYST.get()))
                 .save(recipeOutput);
+
+        // 无序合成： 空白戒指 + 萤石粉 + 金锭 = 流明空白戒指
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.LUMENITE_RING_BLANK.get())
+                .requires(ModItems.RING_BLANK.get())
+                .requires(Items.GLOWSTONE_DUST)
+                .requires(Items.GOLD_INGOT)
+                .unlockedBy("has_ring_blank", has(ModItems.RING_BLANK.get()))
+                .save(recipeOutput);
+
+        // 无序合成： 流明空白戒指 + 流明尘 = 小型光辉戒指
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SMALL_GLOW_RING.get())
+                .requires(ModItems.LUMENITE_RING_BLANK.get())
+                .requires(ModItems.LUMEN_DUST.get())
+                .unlockedBy("has_lumen_dust", has(ModItems.LUMEN_DUST.get()))
+                .save(recipeOutput);
     }
 }

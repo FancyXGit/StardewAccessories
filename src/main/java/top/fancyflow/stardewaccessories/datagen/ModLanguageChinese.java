@@ -26,6 +26,8 @@ public class ModLanguageChinese extends LanguageProvider {
         add(ModItems.AQUAMARINE.get(), "海蓝宝石");
         add(ModItems.TOPAZ.get(), "黄水晶");
         add(ModItems.AMETHYST.get(), "紫水晶");
+        add(ModItems.LUMEN_DUST.get(), "流明尘");
+        add(ModItems.LUMENITE_RING_BLANK.get(), "流明空白戒指");
 
         add(ModItems.RUBY_RING.get(), "红宝石戒指");
         add(ModItems.EMERALD_RING.get(), "绿宝石戒指");
@@ -33,5 +35,10 @@ public class ModLanguageChinese extends LanguageProvider {
         add(ModItems.AQUAMARINE_RING.get(), "海蓝宝石戒指");
         add(ModItems.TOPAZ_RING.get(), "黄水晶戒指");
         add(ModItems.AMETHYST_RING.get(), "紫水晶戒指");
+        add(ModItems.SMALL_GLOW_RING.get(), "小型光辉戒指");
+
+        add("tooltip.stardewaccessories.small_glow_ring", "略微照亮周围");
+        add("tooltip.stardewaccessories.small_glow_ring.requires_lambdynlights",
+                "需要安装 LambDynamicLights\n未安装时不发光");
     }
 }
