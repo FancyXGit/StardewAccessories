@@ -104,6 +104,12 @@ public class ModRecipes extends RecipeProvider {
                 .unlockedBy("has_lumen_dust", has(ModItems.LUMEN_DUST.get()))
                 .save(recipeOutput);
 
+        // 无序合成： 4 个磁石碎块 = 磁石
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.MAGNET.get())
+                .requires(ModItems.MAGNET_FRAGMENTS.get(), 4)
+                .unlockedBy("has_magnet_fragments", has(ModItems.MAGNET_FRAGMENTS.get()))
+                .save(recipeOutput);
+
         // 无序合成： 流明空白戒指 + 流明晶 = 光辉戒指
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GLOW_RING.get())
                 .requires(ModItems.LUMENITE_RING_BLANK.get())
@@ -118,5 +124,20 @@ public class ModRecipes extends RecipeProvider {
                 .unlockedBy("has_small_glow_ring", has(ModItems.SMALL_GLOW_RING.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(
                         StardewAccessories.MODID, "glow_ring_from_small_glow_ring"));
+
+        // 无序合成： 金属空白戒指 + 磁石 = 磁铁戒指
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.MAGNET_RING.get())
+                .requires(ModItems.METAL_RING_BLANK.get())
+                .requires(ModItems.MAGNET.get())
+                .unlockedBy("has_magnet", has(ModItems.MAGNET.get()))
+                .save(recipeOutput);
+
+        // 无序合成： 小型磁铁戒指 + 磁石 = 磁铁戒指（升级路线；产物与上一条相同，用单独 id 避免覆盖）
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.MAGNET_RING.get())
+                .requires(ModItems.SMALL_MAGNET_RING.get())
+                .requires(ModItems.MAGNET.get())
+                .unlockedBy("has_small_magnet_ring", has(ModItems.SMALL_MAGNET_RING.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(
+                        StardewAccessories.MODID, "magnet_ring_from_small_magnet_ring"));
     }
 }

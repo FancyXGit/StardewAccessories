@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_small_magnet_ring": {
+      "conditions": {
+        "items": [
+          {
+            "items": "stardewaccessories:small_magnet_ring"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "stardewaccessories:magnet_ring_from_small_magnet_ring"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_small_magnet_ring"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "stardewaccessories:magnet_ring_from_small_magnet_ring"
+    ]
+  }
+}

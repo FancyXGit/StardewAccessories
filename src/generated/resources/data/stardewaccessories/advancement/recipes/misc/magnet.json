@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_magnet_fragments": {
+      "conditions": {
+        "items": [
+          {
+            "items": "stardewaccessories:magnet_fragments"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "stardewaccessories:magnet"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_magnet_fragments"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "stardewaccessories:magnet"
+    ]
+  }
+}

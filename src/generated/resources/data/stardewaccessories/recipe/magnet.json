@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "stardewaccessories:magnet_fragments"
+    },
+    {
+      "item": "stardewaccessories:magnet_fragments"
+    },
+    {
+      "item": "stardewaccessories:magnet_fragments"
+    },
+    {
+      "item": "stardewaccessories:magnet_fragments"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "stardewaccessories:magnet"
+  }
+}

@@ -48,5 +48,9 @@ public class Config {
             .comment("小型磁铁戒指吸物品的最大速度（格/tick，1.0 约等于每秒 20 格）")
             .defineInRange("smallMagnetRingPullSpeed", 1.0, 0.0, 16.0);
 
+    public static final ModConfigSpec.DoubleValue MAGNET_RING_RANGE = BUILDER
+            .comment("磁铁戒指的吸取半径（格）：把周围这个范围内的掉落物吸向玩家")
+            .defineInRange("magnetRingRange", 5.0, 0.0, 64.0);
+
     public static final ModConfigSpec SPEC = BUILDER.build();
 }

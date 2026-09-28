@@ -68,12 +68,19 @@ public class MagnetRingEvents {
         return item.getOwner() != null && player.getUUID().equals(item.getOwner().getUUID());
     }
 
-    // 佩戴戒指时返回配置的吸取半径，没戴返回 0
+    // 佩戴戒指时返回配置的吸取半径（多枚取最大值），没戴返回 0
     private static double magnetRange(Player player) {
         return CuriosApi.getCuriosInventory(player)
-                .map(inventory -> inventory.findFirstCurio(ModItems.SMALL_MAGNET_RING.get()).isPresent()
-                        ? Config.SMALL_MAGNET_RING_RANGE.get()
-                        : 0.0D)
+                .map(inventory -> {
+                    double range = 0.0D;
+                    if (inventory.findFirstCurio(ModItems.SMALL_MAGNET_RING.get()).isPresent()) {
+                        range = Math.max(range, Config.SMALL_MAGNET_RING_RANGE.get());
+                    }
+                    if (inventory.findFirstCurio(ModItems.MAGNET_RING.get()).isPresent()) {
+                        range = Math.max(range, Config.MAGNET_RING_RANGE.get());
+                    }
+                    return range;
+                })
                 .orElse(0.0D);
     }
 }
