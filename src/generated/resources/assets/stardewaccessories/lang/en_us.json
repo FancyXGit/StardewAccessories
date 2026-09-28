@@ -7,5 +7,6 @@
   "item.stardewaccessories.ring_blank": "Ring Blank",
   "item.stardewaccessories.ruby": "Ruby",
   "item.stardewaccessories.ruby_ring": "Ruby Ring",
-  "itemGroup.stardewaccessories": "Stardew Accessories"
+  "itemGroup.stardewaccessories": "Stardew Accessories",
+  "tooltip.stardewaccessories.jade_ring": "+10% Critical Damage"
 }

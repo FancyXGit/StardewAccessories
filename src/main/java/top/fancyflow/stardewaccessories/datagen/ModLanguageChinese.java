@@ -15,6 +15,7 @@ public class ModLanguageChinese extends LanguageProvider {
     @Override
     protected void addTranslations() {
         add("itemGroup.stardewaccessories", "星露谷饰品");
+        add("tooltip.stardewaccessories.jade_ring", "+10% 暴击伤害");
         add(ModItems.CHICKEN.get(), "可爱小鸡");
 
         add(ModItems.RING_BLANK.get(), "空白戒指");

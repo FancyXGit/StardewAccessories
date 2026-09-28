@@ -15,6 +15,7 @@ public class ModLanguageEnglish extends LanguageProvider {
     @Override
     protected void addTranslations() {
         add("itemGroup.stardewaccessories", "Stardew Accessories");
+        add("tooltip.stardewaccessories.jade_ring", "+10% Critical Damage");
         add(ModItems.CHICKEN.get(), "Golden Chicken");
 
         add(ModItems.RING_BLANK.get(), "Ring Blank");
