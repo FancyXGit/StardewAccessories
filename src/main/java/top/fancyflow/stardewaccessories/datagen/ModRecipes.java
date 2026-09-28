@@ -39,5 +39,12 @@ public class ModRecipes extends RecipeProvider {
                 .requires(ModItems.EMERALD.get())
                 .unlockedBy("has_emerald", has(ModItems.EMERALD.get()))
                 .save(recipeOutput);
+
+        // 无序合成： 空白戒指 + 翡翠 = 翡翠戒指
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.JADE_RING.get())
+                .requires(ModItems.RING_BLANK.get())
+                .requires(ModItems.JADE.get())
+                .unlockedBy("has_jade", has(ModItems.JADE.get()))
+                .save(recipeOutput);
     }
 }
