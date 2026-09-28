@@ -19,7 +19,9 @@ public class ModLanguageEnglish extends LanguageProvider {
 
         add(ModItems.RING_BLANK.get(), "Ring Blank");
         add(ModItems.RUBY.get(), "Ruby");
+        add(ModItems.EMERALD.get(), "Emerald");
 
         add(ModItems.RUBY_RING.get(), "Ruby Ring");
+        add(ModItems.EMERALD_RING.get(), "Emerald Ring");
     }
 }

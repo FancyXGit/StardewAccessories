@@ -30,7 +30,14 @@ public class ModRecipes extends RecipeProvider {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RUBY_RING.get())
                 .requires(ModItems.RING_BLANK.get())
                 .requires(ModItems.RUBY.get())
-                .unlockedBy("has_ring_blank", has(ModItems.RING_BLANK.get()))
+                .unlockedBy("has_ruby", has(ModItems.RUBY.get()))
+                .save(recipeOutput);
+
+        // 无序合成： 空白戒指 + 绿宝石 = 绿宝石戒指
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.EMERALD_RING.get())
+                .requires(ModItems.RING_BLANK.get())
+                .requires(ModItems.EMERALD.get())
+                .unlockedBy("has_emerald", has(ModItems.EMERALD.get()))
                 .save(recipeOutput);
     }
 }

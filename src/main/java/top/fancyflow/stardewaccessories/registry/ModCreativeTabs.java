@@ -27,7 +27,15 @@ public class ModCreativeTabs {
                     // 决定这个页签里显示哪些物品（顺序即显示顺序）
                     .displayItems((params, output) -> {
                         output.accept(ModItems.CHICKEN.get());
+
+                        // 材料
+                        output.accept(ModItems.RING_BLANK.get());
+                        output.accept(ModItems.RUBY.get());
+                        output.accept(ModItems.EMERALD.get());
+
+                        // 戒指
                         output.accept(ModItems.RUBY_RING.get());
+                        output.accept(ModItems.EMERALD_RING.get());
                     })
                     .build());
 

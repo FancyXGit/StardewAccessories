@@ -19,7 +19,9 @@ public class ModLanguageChinese extends LanguageProvider {
 
         add(ModItems.RING_BLANK.get(), "空白戒指");
         add(ModItems.RUBY.get(), "红宝石");
+        add(ModItems.EMERALD.get(), "绿宝石");
 
         add(ModItems.RUBY_RING.get(), "红宝石戒指");
+        add(ModItems.EMERALD_RING.get(), "绿宝石戒指");
     }
 }

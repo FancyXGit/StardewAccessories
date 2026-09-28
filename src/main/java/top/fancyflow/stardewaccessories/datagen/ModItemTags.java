@@ -26,6 +26,7 @@ public class ModItemTags extends ItemTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
         // 新增饰品时，在这里把它加进对应槽位的标签（CuriosTags.HEAD/NECKLACE/RING/...）
         tag(CuriosTags.RING).add(ModItems.RUBY_RING.get());
+        tag(CuriosTags.RING).add(ModItems.EMERALD_RING.get());
         // 想让物品任何槽都能放，用通用标签：tag(CuriosTags.CURIO).add(...);
     }
 }

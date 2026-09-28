@@ -6,6 +6,7 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import top.fancyflow.stardewaccessories.StardewAccessories;
+import top.fancyflow.stardewaccessories.item.EmeraldRing;
 import top.fancyflow.stardewaccessories.item.RubyRing;
 
 // 所有物品的注册集中在这里；新增物品时在对应分组下加一行
@@ -21,10 +22,14 @@ public class ModItems {
     public static final DeferredItem<Item> RING_BLANK = ITEMS.registerSimpleItem("ring_blank", new Item.Properties());
     // 红宝石
     public static final DeferredItem<Item> RUBY = ITEMS.registerSimpleItem("ruby", new Item.Properties());
+    // 绿宝石
+    public static final DeferredItem<Item> EMERALD = ITEMS.registerSimpleItem("emerald", new Item.Properties());
 
     // 戒指
     // 红宝石戒指：加10%伤害
     public static final DeferredItem<RubyRing> RUBY_RING = ITEMS.registerItem("ruby_ring", RubyRing::new, new Item.Properties());
+    // 绿宝石戒指：加10%攻速
+    public static final DeferredItem<EmeraldRing> EMERALD_RING = ITEMS.registerItem("emerald_ring", EmeraldRing::new, new Item.Properties());
 
     public static void register(IEventBus modEventBus) {
         ITEMS.register(modEventBus);
