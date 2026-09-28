@@ -14,10 +14,11 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
 
 import top.fancyflow.stardewaccessories.StardewAccessories;
+import top.fancyflow.stardewaccessories.config.Config;
 import top.fancyflow.stardewaccessories.registry.ModItems;
 import top.theillusivec4.curios.api.CuriosApi;
 
-// 每 tick 检查哪些玩家戴着小型光辉戒指，并为他们在 LambDynamicLights 里登记/移除光源。
+// 每 tick 检查哪些玩家戴着发光戒指，并为他们在 LambDynamicLights 里登记/更新/移除光源。
 // 注意：本类刻意不直接引用 LambDynamicLights 的任何类型（管理器用 Object 保存），
 // 这样即使玩家没装 LambDynamicLights，加载这个类也不会因为缺少类而崩溃。
 @EventBusSubscriber(modid = StardewAccessories.MODID, value = Dist.CLIENT)
@@ -54,38 +55,49 @@ public final class GlowRingLightManager {
             trackedLevel = level;
         }
 
-        // 找出当前戴着戒指的玩家
-        Set<Player> glowing = new HashSet<>();
-        for (Player player : level.players()) {
-            if (wearsGlowRing(player)) {
-                glowing.add(player);
-            }
-        }
+        Set<Player> present = new HashSet<>(level.players());
 
-        // 取下来 / 离开的玩家：移除光源
+        // 已离开的玩家：移除光源
         LIGHTS.entrySet().removeIf(entry -> {
-            if (!glowing.contains(entry.getKey())) {
+            if (!present.contains(entry.getKey())) {
                 GlowRingLightHelper.remove(manager, entry.getValue());
                 return true;
             }
             return false;
         });
 
-        // 新戴上戒指的玩家：登记光源
-        for (Player player : glowing) {
-            LIGHTS.computeIfAbsent(player, p -> {
-                Object light = GlowRingLightHelper.create(p);
+        // 当前玩家：按所戴戒指的最大亮度登记 / 更新光源
+        for (Player player : present) {
+            int luminance = luminanceOf(player);
+            Object existing = LIGHTS.get(player);
+            if (luminance <= 0) {
+                if (existing != null) {
+                    GlowRingLightHelper.remove(manager, existing);
+                    LIGHTS.remove(player);
+                }
+            } else if (existing == null) {
+                Object light = GlowRingLightHelper.create(player, luminance);
                 GlowRingLightHelper.add(manager, light);
-                return light;
-            });
+                LIGHTS.put(player, light);
+            } else {
+                // 亮度没变时是空操作
+                GlowRingLightHelper.setLuminance(existing, luminance);
+            }
         }
     }
 
-    // 客户端检查玩家戒指槽里有没有小型光辉戒指
-    private static boolean wearsGlowRing(Player player) {
-        return CuriosApi.getCuriosInventory(player)
-                .flatMap(inventory -> inventory.findFirstCurio(ModItems.SMALL_GLOW_RING.get()))
-                .isPresent();
+    // 客户端检查玩家戴着的发光戒指，返回其中最大的光照等级（0 表示没戴）
+    private static int luminanceOf(Player player) {
+        return CuriosApi.getCuriosInventory(player).map(inventory -> {
+            int luminance = 0;
+            if (inventory.findFirstCurio(ModItems.SMALL_GLOW_RING.get()).isPresent()) {
+                luminance = Math.max(luminance, Config.SMALL_GLOW_RING_LIGHT.get());
+            }
+            if (inventory.findFirstCurio(ModItems.GLOW_RING.get()).isPresent()) {
+                luminance = Math.max(luminance, Config.GLOW_RING_LIGHT.get());
+            }
+            return luminance;
+        }).orElse(0);
     }
 
     private static void clear() {

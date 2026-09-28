@@ -8,9 +8,11 @@
   "item.stardewaccessories.chicken": "Golden Chicken",
   "item.stardewaccessories.emerald": "Emerald",
   "item.stardewaccessories.emerald_ring": "Emerald Ring",
+  "item.stardewaccessories.glow_ring": "Glow Ring",
   "item.stardewaccessories.jade": "Jade",
   "item.stardewaccessories.jade_ring": "Jade Ring",
   "item.stardewaccessories.lumen_dust": "Lumen Dust",
+  "item.stardewaccessories.lumenite": "Lumenite",
   "item.stardewaccessories.lumenite_ring_blank": "Lumen Ring Blank",
   "item.stardewaccessories.ring_blank": "Ring Blank",
   "item.stardewaccessories.ruby": "Ruby",
@@ -19,6 +21,8 @@
   "item.stardewaccessories.topaz": "Topaz",
   "item.stardewaccessories.topaz_ring": "Topaz Ring",
   "itemGroup.stardewaccessories": "Stardew Accessories",
-  "tooltip.stardewaccessories.small_glow_ring": "Slightly lights up the area around you",
-  "tooltip.stardewaccessories.small_glow_ring.requires_lambdynlights": "Requires LambDynamicLights\nNo effect when not installed"
+  "tooltip.stardewaccessories.glow_ring": "Brightly lights up the area around you",
+  "tooltip.stardewaccessories.not_installed": "No effect when not installed",
+  "tooltip.stardewaccessories.requires_lambdynlights": "Requires LambDynamicLights",
+  "tooltip.stardewaccessories.small_glow_ring": "Slightly lights up the area around you"
 }

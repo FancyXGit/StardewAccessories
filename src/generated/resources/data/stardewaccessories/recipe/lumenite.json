@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "stardewaccessories:lumen_dust"
+    },
+    {
+      "item": "stardewaccessories:lumen_dust"
+    },
+    {
+      "item": "stardewaccessories:lumen_dust"
+    },
+    {
+      "item": "stardewaccessories:lumen_dust"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "stardewaccessories:lumenite"
+  }
+}

@@ -35,5 +35,10 @@ public class Config {
                     + "LambDynamicLights 会把 15 级光压缩到约 7.75 格，因此 8 级约照亮 4 格半径")
             .defineInRange("smallGlowRingLight", 8, 0, 15);
 
+    public static final ModConfigSpec.IntValue GLOW_RING_LIGHT = BUILDER
+            .comment("光辉戒指的动态光照强度（0~15）。需要安装 LambDynamicLights 才有效果；"
+                    + "LambDynamicLights 会把 15 级光压缩到约 7.75 格")
+            .defineInRange("glowRingLight", 15, 0, 15);
+
     public static final ModConfigSpec SPEC = BUILDER.build();
 }

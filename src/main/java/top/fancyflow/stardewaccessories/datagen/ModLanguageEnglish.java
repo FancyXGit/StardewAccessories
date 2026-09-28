@@ -27,6 +27,7 @@ public class ModLanguageEnglish extends LanguageProvider {
         add(ModItems.TOPAZ.get(), "Topaz");
         add(ModItems.AMETHYST.get(), "Amethyst");
         add(ModItems.LUMEN_DUST.get(), "Lumen Dust");
+        add(ModItems.LUMENITE.get(), "Lumenite");
         add(ModItems.LUMENITE_RING_BLANK.get(), "Lumen Ring Blank");
 
         add(ModItems.RUBY_RING.get(), "Ruby Ring");
@@ -36,9 +37,11 @@ public class ModLanguageEnglish extends LanguageProvider {
         add(ModItems.TOPAZ_RING.get(), "Topaz Ring");
         add(ModItems.AMETHYST_RING.get(), "Amethyst Ring");
         add(ModItems.SMALL_GLOW_RING.get(), "Small Glow Ring");
+        add(ModItems.GLOW_RING.get(), "Glow Ring");
 
         add("tooltip.stardewaccessories.small_glow_ring", "Slightly lights up the area around you");
-        add("tooltip.stardewaccessories.small_glow_ring.requires_lambdynlights",
-                "Requires LambDynamicLights\nNo effect when not installed");
+        add("tooltip.stardewaccessories.glow_ring", "Brightly lights up the area around you");
+        add("tooltip.stardewaccessories.requires_lambdynlights", "Requires LambDynamicLights");
+        add("tooltip.stardewaccessories.not_installed", "No effect when not installed");
     }
 }

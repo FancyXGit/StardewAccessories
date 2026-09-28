@@ -11,8 +11,12 @@ final class GlowRingLightHelper {
     private GlowRingLightHelper() {
     }
 
-    static Object create(Player player) {
-        return new PlayerGlowLight(player);
+    static Object create(Player player, int luminance) {
+        return new PlayerGlowLight(player, luminance);
+    }
+
+    static void setLuminance(Object light, int luminance) {
+        ((PlayerGlowLight) light).setLuminance(luminance);
     }
 
     static void add(Object manager, Object source) {

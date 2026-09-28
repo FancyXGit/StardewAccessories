@@ -15,6 +15,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
+import top.fancyflow.stardewaccessories.StardewAccessories;
 import top.fancyflow.stardewaccessories.registry.ModItems;
 
 // 生成 data/stardewaccessories/recipe/*.json 以及配方书解锁进度
@@ -82,5 +83,26 @@ public class ModRecipes extends RecipeProvider {
                 .requires(ModItems.LUMEN_DUST.get())
                 .unlockedBy("has_lumen_dust", has(ModItems.LUMEN_DUST.get()))
                 .save(recipeOutput);
+
+        // 无序合成： 4 个流明尘 = 流明晶
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.LUMENITE.get())
+                .requires(ModItems.LUMEN_DUST.get(), 4)
+                .unlockedBy("has_lumen_dust", has(ModItems.LUMEN_DUST.get()))
+                .save(recipeOutput);
+
+        // 无序合成： 流明空白戒指 + 流明晶 = 光辉戒指
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GLOW_RING.get())
+                .requires(ModItems.LUMENITE_RING_BLANK.get())
+                .requires(ModItems.LUMENITE.get())
+                .unlockedBy("has_lumenite", has(ModItems.LUMENITE.get()))
+                .save(recipeOutput);
+
+        // 无序合成： 小型光辉戒指 + 流明晶 = 光辉戒指（升级路线；产物与上一条相同，用单独 id 避免覆盖）
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GLOW_RING.get())
+                .requires(ModItems.SMALL_GLOW_RING.get())
+                .requires(ModItems.LUMENITE.get())
+                .unlockedBy("has_small_glow_ring", has(ModItems.SMALL_GLOW_RING.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(
+                        StardewAccessories.MODID, "glow_ring_from_small_glow_ring"));
     }
 }

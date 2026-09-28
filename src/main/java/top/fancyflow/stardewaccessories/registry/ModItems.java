@@ -9,6 +9,7 @@ import top.fancyflow.stardewaccessories.StardewAccessories;
 import top.fancyflow.stardewaccessories.item.AmethystRing;
 import top.fancyflow.stardewaccessories.item.AquamarineRing;
 import top.fancyflow.stardewaccessories.item.EmeraldRing;
+import top.fancyflow.stardewaccessories.item.GlowRing;
 import top.fancyflow.stardewaccessories.item.JadeRing;
 import top.fancyflow.stardewaccessories.item.RubyRing;
 import top.fancyflow.stardewaccessories.item.SmallGlowRing;
@@ -39,6 +40,8 @@ public class ModItems {
     public static final DeferredItem<Item> AMETHYST = ITEMS.registerSimpleItem("amethyst", new Item.Properties());
     // 流明尘（暂时只能从创造栏获取，来源以后再定）
     public static final DeferredItem<Item> LUMEN_DUST = ITEMS.registerSimpleItem("lumen_dust", new Item.Properties());
+    // 流明晶（由 4 个流明尘合成）
+    public static final DeferredItem<Item> LUMENITE = ITEMS.registerSimpleItem("lumenite", new Item.Properties());
     // 流明空白戒指（材料）
     public static final DeferredItem<Item> LUMENITE_RING_BLANK = ITEMS.registerSimpleItem("lumenite_ring_blank", new Item.Properties());
 
@@ -57,6 +60,8 @@ public class ModItems {
     public static final DeferredItem<AmethystRing> AMETHYST_RING = ITEMS.registerItem("amethyst_ring", AmethystRing::new, new Item.Properties().stacksTo(1));
     // 小型光辉戒指：佩戴后客户端动态照明；不可堆叠
     public static final DeferredItem<SmallGlowRing> SMALL_GLOW_RING = ITEMS.registerItem("small_glow_ring", SmallGlowRing::new, new Item.Properties().stacksTo(1));
+    // 光辉戒指：佩戴后客户端动态照明（更亮）；不可堆叠
+    public static final DeferredItem<GlowRing> GLOW_RING = ITEMS.registerItem("glow_ring", GlowRing::new, new Item.Properties().stacksTo(1));
 
     public static void register(IEventBus modEventBus) {
         ITEMS.register(modEventBus);

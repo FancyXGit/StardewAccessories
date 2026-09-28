@@ -34,6 +34,7 @@ public class ModCreativeTabs {
                         output.accept(ModItems.TOPAZ_RING.get());
                         output.accept(ModItems.AMETHYST_RING.get());
                         output.accept(ModItems.SMALL_GLOW_RING.get());
+                        output.accept(ModItems.GLOW_RING.get());
 
                         // 标志
                         output.accept(ModItems.CHICKEN.get());
@@ -48,6 +49,7 @@ public class ModCreativeTabs {
                         output.accept(ModItems.TOPAZ.get());
                         output.accept(ModItems.AMETHYST.get());
                         output.accept(ModItems.LUMEN_DUST.get());
+                        output.accept(ModItems.LUMENITE.get());
 
                     })
                     .build());

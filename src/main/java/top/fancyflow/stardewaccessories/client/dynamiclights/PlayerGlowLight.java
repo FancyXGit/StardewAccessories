@@ -5,19 +5,28 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.player.Player;
 
-import top.fancyflow.stardewaccessories.config.Config;
-
-// 以玩家为中心的一个"点光源"。亮度从配置读取，随距离按原版方式衰减。
+// 以玩家为中心的一个"点光源"。亮度由管理器传入，随距离按原版方式衰减。
 public class PlayerGlowLight implements DynamicLightBehavior {
 
     private final Player player;
+    private int luminance;
     private double x;
     private double y;
     private double z;
+    private boolean luminanceChanged;
 
-    public PlayerGlowLight(Player player) {
+    public PlayerGlowLight(Player player, int luminance) {
         this.player = player;
+        this.luminance = luminance;
         updatePosition();
+    }
+
+    // 运行时更改亮度（例如换上更亮的戒指）
+    public void setLuminance(int luminance) {
+        if (luminance != this.luminance) {
+            this.luminance = luminance;
+            this.luminanceChanged = true;
+        }
     }
 
     // 光从玩家胸口高度发出
@@ -37,8 +46,8 @@ public class PlayerGlowLight implements DynamicLightBehavior {
         double dy = pos.getY() + 0.5 - this.y;
         double dz = pos.getZ() + 0.5 - this.z;
         double distanceSquared = dx * dx + dy * dy + dz * dz;
-        // 光等级从配置读取（0~15）；falloffRatio 让衰减范围符合 LambDynamicLights 的尺度
-        return Math.max(Config.SMALL_GLOW_RING_LIGHT.get() - Math.sqrt(distanceSquared) * falloffRatio, 0.0);
+        // falloffRatio 让衰减范围符合 LambDynamicLights 的尺度
+        return Math.max(this.luminance - Math.sqrt(distanceSquared) * falloffRatio, 0.0);
     }
 
     @Override
@@ -52,14 +61,16 @@ public class PlayerGlowLight implements DynamicLightBehavior {
 
     @Override
     public boolean hasChanged() {
-        // 玩家移动超过约 0.1 格就通知 LambDynamicLights 更新光照
+        // 玩家移动超过约 0.1 格、或亮度变化时通知 LambDynamicLights 刷新
         double dx = player.getX() - this.x;
         double dy = lightY() - this.y;
         double dz = player.getZ() - this.z;
-        if (dx * dx + dy * dy + dz * dz > 0.01) {
+        boolean moved = dx * dx + dy * dy + dz * dz > 0.01;
+        if (moved) {
             updatePosition();
-            return true;
         }
-        return false;
+        boolean changed = moved || this.luminanceChanged;
+        this.luminanceChanged = false;
+        return changed;
     }
 }

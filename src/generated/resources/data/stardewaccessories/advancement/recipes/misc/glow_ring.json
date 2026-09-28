@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_lumenite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "stardewaccessories:lumenite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "stardewaccessories:glow_ring"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_lumenite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "stardewaccessories:glow_ring"
+    ]
+  }
+}

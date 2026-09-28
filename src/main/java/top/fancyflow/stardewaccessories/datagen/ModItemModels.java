@@ -28,6 +28,7 @@ public class ModItemModels extends ItemModelProvider {
         basicItem(ModItems.TOPAZ.get());
         basicItem(ModItems.AMETHYST.get());
         basicItem(ModItems.LUMEN_DUST.get());
+        basicItem(ModItems.LUMENITE.get());
         basicItem(ModItems.LUMENITE_RING_BLANK.get());
 
         // 戒指
@@ -38,6 +39,7 @@ public class ModItemModels extends ItemModelProvider {
         basicItem(ModItems.TOPAZ_RING.get());
         basicItem(ModItems.AMETHYST_RING.get());
         basicItem(ModItems.SMALL_GLOW_RING.get());
+        basicItem(ModItems.GLOW_RING.get());
         // 方块物品的模型由 ModBlockStates 的 simpleBlockWithItem 生成，不要在这里重复写
     }
 }

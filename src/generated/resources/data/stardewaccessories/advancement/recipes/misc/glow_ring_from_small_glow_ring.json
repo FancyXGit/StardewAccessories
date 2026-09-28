@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_small_glow_ring": {
+      "conditions": {
+        "items": [
+          {
+            "items": "stardewaccessories:small_glow_ring"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "stardewaccessories:glow_ring_from_small_glow_ring"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_small_glow_ring"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "stardewaccessories:glow_ring_from_small_glow_ring"
+    ]
+  }
+}
