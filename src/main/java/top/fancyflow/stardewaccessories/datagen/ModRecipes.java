@@ -53,5 +53,19 @@ public class ModRecipes extends RecipeProvider {
                 .requires(ModItems.AQUAMARINE.get())
                 .unlockedBy("has_aquamarine", has(ModItems.AQUAMARINE.get()))
                 .save(recipeOutput);
+
+        // 无序合成： 空白戒指 + 黄水晶 = 黄水晶戒指
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.TOPAZ_RING.get())
+                .requires(ModItems.RING_BLANK.get())
+                .requires(ModItems.TOPAZ.get())
+                .unlockedBy("has_topaz", has(ModItems.TOPAZ.get()))
+                .save(recipeOutput);
+
+        // 无序合成： 空白戒指 + 紫水晶 = 紫水晶戒指
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.AMETHYST_RING.get())
+                .requires(ModItems.RING_BLANK.get())
+                .requires(ModItems.AMETHYST.get())
+                .unlockedBy("has_amethyst", has(ModItems.AMETHYST.get()))
+                .save(recipeOutput);
     }
 }

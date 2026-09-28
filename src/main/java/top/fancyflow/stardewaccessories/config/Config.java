@@ -22,5 +22,13 @@ public class Config {
             .comment("海蓝宝石戒指的额外暴击率（0.05 = +5%）")
             .defineInRange("aquamarineRingCritChance", 0.05, 0.0, 1.0);
 
+    public static final ModConfigSpec.DoubleValue TOPAZ_RING_ARMOR = BUILDER
+            .comment("黄水晶戒指的额外盔甲值（6.0 = +6 点）")
+            .defineInRange("topazRingArmor", 6.0, 0.0, 1024.0);
+
+    public static final ModConfigSpec.DoubleValue AMETHYST_RING_KNOCKBACK = BUILDER
+            .comment("紫水晶戒指的额外攻击击退点数（1.0 ≈ 击退附魔 I）")
+            .defineInRange("amethystRingKnockback", 1.0, 0.0, 1024.0);
+
     public static final ModConfigSpec SPEC = BUILDER.build();
 }

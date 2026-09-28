@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "stardewaccessories:ring_blank"
+    },
+    {
+      "item": "stardewaccessories:amethyst"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "stardewaccessories:amethyst_ring"
+  }
+}

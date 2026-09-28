@@ -31,6 +31,8 @@ public class ModCreativeTabs {
                         output.accept(ModItems.EMERALD_RING.get());
                         output.accept(ModItems.JADE_RING.get());
                         output.accept(ModItems.AQUAMARINE_RING.get());
+                        output.accept(ModItems.TOPAZ_RING.get());
+                        output.accept(ModItems.AMETHYST_RING.get());
 
                         // 标志
                         output.accept(ModItems.CHICKEN.get());
@@ -41,6 +43,8 @@ public class ModCreativeTabs {
                         output.accept(ModItems.EMERALD.get());
                         output.accept(ModItems.JADE.get());
                         output.accept(ModItems.AQUAMARINE.get());
+                        output.accept(ModItems.TOPAZ.get());
+                        output.accept(ModItems.AMETHYST.get());
 
                     })
                     .build());

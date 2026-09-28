@@ -24,10 +24,14 @@ public class ModLanguageChinese extends LanguageProvider {
         add(ModItems.EMERALD.get(), "绿宝石");
         add(ModItems.JADE.get(), "翡翠");
         add(ModItems.AQUAMARINE.get(), "海蓝宝石");
+        add(ModItems.TOPAZ.get(), "黄水晶");
+        add(ModItems.AMETHYST.get(), "紫水晶");
 
         add(ModItems.RUBY_RING.get(), "红宝石戒指");
         add(ModItems.EMERALD_RING.get(), "绿宝石戒指");
         add(ModItems.JADE_RING.get(), "翡翠戒指");
         add(ModItems.AQUAMARINE_RING.get(), "海蓝宝石戒指");
+        add(ModItems.TOPAZ_RING.get(), "黄水晶戒指");
+        add(ModItems.AMETHYST_RING.get(), "紫水晶戒指");
     }
 }

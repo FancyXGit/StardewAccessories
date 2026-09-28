@@ -1,6 +1,8 @@
 {
   "attribute.name.stardewaccessories.crit_chance": "暴击率",
   "attribute.name.stardewaccessories.crit_damage": "暴击伤害",
+  "item.stardewaccessories.amethyst": "紫水晶",
+  "item.stardewaccessories.amethyst_ring": "紫水晶戒指",
   "item.stardewaccessories.aquamarine": "海蓝宝石",
   "item.stardewaccessories.aquamarine_ring": "海蓝宝石戒指",
   "item.stardewaccessories.chicken": "可爱小鸡",
@@ -11,5 +13,7 @@
   "item.stardewaccessories.ring_blank": "空白戒指",
   "item.stardewaccessories.ruby": "红宝石",
   "item.stardewaccessories.ruby_ring": "红宝石戒指",
+  "item.stardewaccessories.topaz": "黄水晶",
+  "item.stardewaccessories.topaz_ring": "黄水晶戒指",
   "itemGroup.stardewaccessories": "星露谷饰品"
 }

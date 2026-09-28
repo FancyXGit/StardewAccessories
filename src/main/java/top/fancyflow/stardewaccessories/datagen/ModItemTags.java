@@ -29,6 +29,8 @@ public class ModItemTags extends ItemTagsProvider {
         tag(CuriosTags.RING).add(ModItems.EMERALD_RING.get());
         tag(CuriosTags.RING).add(ModItems.JADE_RING.get());
         tag(CuriosTags.RING).add(ModItems.AQUAMARINE_RING.get());
+        tag(CuriosTags.RING).add(ModItems.TOPAZ_RING.get());
+        tag(CuriosTags.RING).add(ModItems.AMETHYST_RING.get());
         // 想让物品任何槽都能放，用通用标签：tag(CuriosTags.CURIO).add(...);
     }
 }

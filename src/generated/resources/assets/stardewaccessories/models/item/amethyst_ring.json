@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "stardewaccessories:item/amethyst_ring"
+  }
+}
