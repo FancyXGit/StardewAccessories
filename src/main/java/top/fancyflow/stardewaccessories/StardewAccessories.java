@@ -7,6 +7,8 @@ import com.mojang.logging.LogUtils;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.config.ModConfig;
+import top.fancyflow.stardewaccessories.config.Config;
 import top.fancyflow.stardewaccessories.registry.ModBlocks;
 import top.fancyflow.stardewaccessories.registry.ModCreativeTabs;
 import top.fancyflow.stardewaccessories.registry.ModItems;
@@ -26,5 +28,7 @@ public class StardewAccessories {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModCreativeTabs.register(modEventBus);
+        // 注册配置文件（生成 config/stardewaccessories-common.toml）
+        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 }

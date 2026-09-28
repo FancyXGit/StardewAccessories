@@ -5,6 +5,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.player.CriticalHitEvent;
 
 import top.fancyflow.stardewaccessories.StardewAccessories;
+import top.fancyflow.stardewaccessories.config.Config;
 import top.fancyflow.stardewaccessories.registry.ModItems;
 import top.theillusivec4.curios.api.CuriosApi;
 
@@ -24,7 +25,9 @@ public class JadeRingEvents {
                 .orElse(0);
 
         if (rings > 0) {
-            event.setDamageMultiplier(event.getDamageMultiplier() + 0.10F * rings);
+            // 每个翡翠戒指加一份暴击倍率，数值来自配置
+            event.setDamageMultiplier(
+                    event.getDamageMultiplier() + (float) (Config.JADE_RING_CRIT_DAMAGE.get() * rings));
         }
     }
 }

@@ -11,6 +11,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
 import top.fancyflow.stardewaccessories.StardewAccessories;
+import top.fancyflow.stardewaccessories.config.Config;
 import top.theillusivec4.curios.api.SlotContext;
 import top.theillusivec4.curios.api.type.capability.ICurioItem;
 
@@ -31,9 +32,10 @@ public class RubyRing extends Item implements ICurioItem {
                 StardewAccessories.MODID,
                 "ruby_ring_damage_" + slotContext.identifier() + "_" + slotContext.index());
 
-        // +10% 攻击伤害；ADD_MULTIPLIED_BASE 之间相加，如果两个戒指合计 +20%
+        // 攻击伤害加成，数值来自配置；ADD_MULTIPLIED_BASE 之间相加，如果两个戒指合计 +20%
         modifiers.put(Attributes.ATTACK_DAMAGE,
-                new AttributeModifier(modifierId, 0.10, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
+                new AttributeModifier(modifierId, Config.RUBY_RING_ATTACK_DAMAGE.get(),
+                        AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
 
         return modifiers;
     }

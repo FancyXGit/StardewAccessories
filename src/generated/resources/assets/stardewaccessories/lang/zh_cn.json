@@ -8,5 +8,5 @@
   "item.stardewaccessories.ruby": "红宝石",
   "item.stardewaccessories.ruby_ring": "红宝石戒指",
   "itemGroup.stardewaccessories": "星露谷饰品",
-  "tooltip.stardewaccessories.jade_ring": "+10% 暴击伤害"
+  "tooltip.stardewaccessories.jade_ring": "+%s 暴击伤害"
 }
