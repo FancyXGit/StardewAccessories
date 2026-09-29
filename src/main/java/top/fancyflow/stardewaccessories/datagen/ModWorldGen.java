@@ -83,15 +83,20 @@ public class ModWorldGen extends DatapackBuiltinEntriesProvider {
     }
 
     private static final List<OreVein> ORE_VEINS = List.of(
-            // 星陨矿石：稀有，深层为主，浅层零星；一次只生成一个方块
+            // 星陨矿石：稀有，深层为主，浅层零星。
+            // 注意：minecraft:ore 的 size 是"整条矿脉的大小"，最小可用值是 3（原版最小也只到 3）；
+            // 写 1/2 时球体半径太小，一个方块都放不下，等于不生成。
+            // 深矿峰值约 y=-28，每区块 4 次；discard 0 = 靠着洞穴空气的石块也保留，
+            // 探洞时能看到洞壁上的星陨，不必只靠盲挖
             new OreVein("starshard_ore_deep",
                     stoneAndDeepslate(ModBlocks.STARSHARD_ORE, ModBlocks.DEEPSLATE_STARSHARD_ORE),
-                    1, 4,
-                    HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(24)),
-                    0.25F),
+                    3, 4,
+                    HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(8)),
+                    0.0F),
+            // 浅层零星：矿脉同为 size 3，每区块只尝试 1 次
             new OreVein("starshard_ore_shallow",
                     stoneAndDeepslate(ModBlocks.STARSHARD_ORE, ModBlocks.DEEPSLATE_STARSHARD_ORE),
-                    1, 1,
+                    3, 1,
                     HeightRangePlacement.uniform(VerticalAnchor.absolute(24), VerticalAnchor.absolute(64)),
                     0.25F),
             // 彩晶矿石：与钻石主矿脉相当，深层
