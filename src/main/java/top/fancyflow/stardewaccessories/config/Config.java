@@ -76,5 +76,27 @@ public class Config {
             .comment("野蛮人戒指速度提升的等级（0 = 速度 I，1 = 速度 II，以此类推）")
             .defineInRange("savageRingSpeedAmplifier", 0, 0, 9);
 
+    // ===== 材料掉落概率 =====
+
+    public static final ModConfigSpec.DoubleValue LUMEN_DUST_GLOWSTONE_CHANCE = BUILDER
+            .comment("挖掘萤石时掉落流明尘的概率（0.05 = 5%）")
+            .defineInRange("lumenDustGlowstoneChance", 0.05, 0.0, 1.0);
+
+    public static final ModConfigSpec.DoubleValue MAGNET_FRAGMENTS_CHEST_CHANCE = BUILDER
+            .comment("废弃矿井/地牢箱子中出现磁石碎块的概率（0.10 = 10%，一次 1~2 个）")
+            .defineInRange("magnetFragmentsChestChance", 0.10, 0.0, 1.0);
+
+    public static final ModConfigSpec.DoubleValue SLIME_CRYSTAL_SLIME_CHANCE = BUILDER
+            .comment("玩家击杀史莱姆/岩浆怪时掉落史莱姆结晶的概率（0.01 = 1%）")
+            .defineInRange("slimeCrystalSlimeChance", 0.01, 0.0, 1.0);
+
+    public static final ModConfigSpec.DoubleValue BLOOD_ESSENCE_BAT_CHANCE = BUILDER
+            .comment("玩家击杀蝙蝠时掉落血之精华的概率（0.05 = 5%）")
+            .defineInRange("bloodEssenceBatChance", 0.05, 0.0, 1.0);
+
+    public static final ModConfigSpec.DoubleValue BLOOD_ESSENCE_PHANTOM_CHANCE = BUILDER
+            .comment("玩家击杀幻翼时掉落血之精华的概率（0.10 = 10%）")
+            .defineInRange("bloodEssencePhantomChance", 0.10, 0.0, 1.0);
+
     public static final ModConfigSpec SPEC = BUILDER.build();
 }

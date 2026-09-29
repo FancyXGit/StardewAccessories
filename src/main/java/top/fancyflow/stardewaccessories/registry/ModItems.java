@@ -14,6 +14,7 @@ import top.fancyflow.stardewaccessories.item.EmeraldRing;
 import top.fancyflow.stardewaccessories.item.GlowRing;
 import top.fancyflow.stardewaccessories.item.JadeRing;
 import top.fancyflow.stardewaccessories.item.MagnetRing;
+import top.fancyflow.stardewaccessories.item.MaterialItem;
 import top.fancyflow.stardewaccessories.item.RubyRing;
 import top.fancyflow.stardewaccessories.item.SavageRing;
 import top.fancyflow.stardewaccessories.item.SlimeCharmerRing;
@@ -48,8 +49,10 @@ public class ModItems {
     public static final DeferredItem<Item> TOPAZ = ITEMS.registerSimpleItem("topaz", new Item.Properties());
     // 紫水晶
     public static final DeferredItem<Item> AMETHYST = ITEMS.registerSimpleItem("amethyst", new Item.Properties());
-    // 流明尘（暂时只能从创造栏获取，来源以后再定）
-    public static final DeferredItem<Item> LUMEN_DUST = ITEMS.registerSimpleItem("lumen_dust", new Item.Properties());
+    // 流明尘（挖萤石小概率掉落）
+    public static final DeferredItem<MaterialItem> LUMEN_DUST = ITEMS.registerItem("lumen_dust",
+            properties -> new MaterialItem(properties, "tooltip.stardewaccessories.lumen_dust.source"),
+            new Item.Properties());
     // 流明晶（由 4 个流明尘合成）
     public static final DeferredItem<Item> LUMENITE = ITEMS.registerSimpleItem("lumenite", new Item.Properties());
     // 流明空白戒指（材料）
@@ -64,14 +67,20 @@ public class ModItems {
     public static final DeferredItem<DescribedItem> DARK_ALLOY_RING_BLANK = ITEMS.registerItem("dark_alloy_ring_blank",
             properties -> new DescribedItem(properties, "tooltip.stardewaccessories.dark_alloy_ring_blank.desc"),
             new Item.Properties());
-    // 磁石碎块（暂时只能从创造栏获取，来源以后再定）
-    public static final DeferredItem<Item> MAGNET_FRAGMENTS = ITEMS.registerSimpleItem("magnet_fragments", new Item.Properties());
+    // 磁石碎块（探索废弃矿井/地牢的箱子获得）
+    public static final DeferredItem<MaterialItem> MAGNET_FRAGMENTS = ITEMS.registerItem("magnet_fragments",
+            properties -> new MaterialItem(properties, "tooltip.stardewaccessories.magnet_fragments.source"),
+            new Item.Properties());
     // 磁石（由 4 个磁石碎块合成）
     public static final DeferredItem<Item> MAGNET = ITEMS.registerSimpleItem("magnet", new Item.Properties());
-    // 史莱姆结晶（暂时只能从创造栏获取，来源以后再定）
-    public static final DeferredItem<Item> SLIME_CRYSTAL = ITEMS.registerSimpleItem("slime_crystal", new Item.Properties());
-    // 血之精华（暂时只能从创造栏获取，来源以后再定）
-    public static final DeferredItem<Item> BLOOD_ESSENCE = ITEMS.registerSimpleItem("blood_essence", new Item.Properties());
+    // 史莱姆结晶（击杀史莱姆小概率掉落）
+    public static final DeferredItem<MaterialItem> SLIME_CRYSTAL = ITEMS.registerItem("slime_crystal",
+            properties -> new MaterialItem(properties, "tooltip.stardewaccessories.slime_crystal.source"),
+            new Item.Properties());
+    // 血之精华（击杀蝙蝠/幻翼小概率掉落）
+    public static final DeferredItem<MaterialItem> BLOOD_ESSENCE = ITEMS.registerItem("blood_essence",
+            properties -> new MaterialItem(properties, "tooltip.stardewaccessories.blood_essence.source"),
+            new Item.Properties());
 
     // 矿石方块（物品形式，实际方块在 ModBlocks）
     public static final DeferredItem<BlockItem> STARSHARD_ORE = ITEMS.registerSimpleBlockItem(ModBlocks.STARSHARD_ORE);

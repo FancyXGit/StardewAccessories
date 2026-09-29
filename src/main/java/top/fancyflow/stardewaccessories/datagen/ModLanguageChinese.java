@@ -72,6 +72,12 @@ public class ModLanguageChinese extends LanguageProvider {
         add("tooltip.stardewaccessories.requires_lambdynlights", "需要安装 LambDynamicLights");
         add("tooltip.stardewaccessories.not_installed", "未安装时不发光");
 
+        // 材料获取方式
+        add("tooltip.stardewaccessories.lumen_dust.source", "挖掘萤石时小概率掉落");
+        add("tooltip.stardewaccessories.magnet_fragments.source", "探索矿洞时偶尔在箱子里发现");
+        add("tooltip.stardewaccessories.slime_crystal.source", "击杀史莱姆时小概率掉落");
+        add("tooltip.stardewaccessories.blood_essence.source", "击杀蝙蝠或幻翼时小概率掉落");
+
         // 风味描述
         add("tooltip.stardewaccessories.ruby_ring.desc", "附魔的红宝石，让每一击都更沉一分");
         add("tooltip.stardewaccessories.emerald_ring.desc", "附魔的绿宝石，让出手的节奏轻快起来");

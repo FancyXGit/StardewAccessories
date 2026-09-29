@@ -33,8 +33,8 @@ src/main/java/top/fancyflow/stardewaccessories/
     ModBlocks.java                 方块注册（目前为空）
     ModAttributes.java             自定义属性注册（crit_chance / crit_damage）
     ModCreativeTabs.java           创造页签 stardewaccessories
-  item/                            物品/戒指类（DescribedItem 及各种戒指）
-  event/                           服务端游戏事件监听（磁铁、暴击、史莱姆克星）
+  item/                            物品/戒指类（DescribedItem / MaterialItem 及各种戒指）
+  event/                           服务端游戏事件监听（磁铁、暴击、史莱姆克星、材料掉落）
   client/dynamiclights/            辉光戒指的 LambDynamicLights 软依赖实现
   config/Config.java               所有数值集中在此，生成 config/stardewaccessories-common.toml
   datagen/                         数据生成器（见下）
@@ -69,6 +69,7 @@ src/main/templates/                mods.toml 模板（构建时展开属性）
 - **Tooltip 文案 key**：
   - 作用行：`tooltip.stardewaccessories.<id>`（放进 Curios“佩戴戒指时”作用区，蓝色）
   - 风味描述：`tooltip.stardewaccessories.<id>.desc`（物品备注，灰色）
+  - 获取方式：`tooltip.stardewaccessories.<id>.source`（材料备注，灰色；用 `item/MaterialItem`）
 - **装备进 Curios 戒指槽**必须在 `ModItemTags` 里 `tag(CuriosTags.RING).add(...)`。
 - **数值**（倍率、半径、亮度等）统一放 `Config.java`，用 `ModConfigSpec.DoubleValue/IntValue` 定义，运行时通过 `Config.XXX.get()` 读取。
 - **物品注册**集中在 `ModItems`，按“材料 / 戒指”分组用中文注释。戒指默认 `new Item.Properties().stacksTo(1)`。
@@ -180,11 +181,16 @@ public class SlimeCharmerRingEvents {
 
 ## 物品/材料与配方
 
-- 材料用 `ModItems.registerSimpleItem`；需要风味描述的用 `DescribedItem`。
+- 材料用 `ModItems.registerSimpleItem`；需要风味描述的用 `DescribedItem`；
+  需要“获取方式”备注的用 `MaterialItem`（构造时传 `.source` 的 lang key，可选再传风味 `.desc`）。
 - 配方几乎都是无序合成：`ShapelessRecipeBuilder.shapeless(category, result).requires(...).unlockedBy(...).save(output)`。
 - **同产物多条配方**（升级路线）时，给后一条指定独立 id 以免覆盖，例如：
   `save(recipeOutput, ResourceLocation.fromNamespaceAndPath(MODID, "magnet_ring_from_small_magnet_ring"))`。
-- 部分材料（流明尘、磁石碎块、史莱姆结晶）暂时只能从创造栏获取，来源待定。
+- 材料获取方式（实现见 `event/MaterialDropEvents.java`、`event/MaterialChestLootEvents.java`，概率在 `Config`）：
+  - 流明尘：挖萤石小概率掉落；
+  - 磁石碎块：废弃矿井 / 地牢箱子概率出现（`LootTableLoadEvent` 运行时注入，非 datagen）；
+  - 史莱姆结晶：玩家击杀史莱姆 / 岩浆怪小概率掉落；
+  - 血之精华：玩家击杀蝙蝠 / 幻翼小概率掉落。
 
 ## 世界生成
 

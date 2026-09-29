@@ -72,6 +72,12 @@ public class ModLanguageEnglish extends LanguageProvider {
         add("tooltip.stardewaccessories.requires_lambdynlights", "Requires LambDynamicLights");
         add("tooltip.stardewaccessories.not_installed", "No effect when not installed");
 
+        // Material acquisition
+        add("tooltip.stardewaccessories.lumen_dust.source", "Occasional drop when mining glowstone");
+        add("tooltip.stardewaccessories.magnet_fragments.source", "Occasionally found in mineshaft and dungeon chests");
+        add("tooltip.stardewaccessories.slime_crystal.source", "Occasional drop from slimes");
+        add("tooltip.stardewaccessories.blood_essence.source", "Occasional drop from bats or phantoms");
+
         // Flavor descriptions
         add("tooltip.stardewaccessories.ruby_ring.desc", "An enchanted ruby, putting more weight behind every swing");
         add("tooltip.stardewaccessories.emerald_ring.desc", "An enchanted emerald, quickening the rhythm of your strikes");
