@@ -145,6 +145,19 @@ public class ModRecipes extends RecipeProvider {
                 .unlockedBy("has_blood_essence", has(ModItems.BLOOD_ESSENCE.get()))
                 .save(recipeOutput);
 
+        // 有序合成： 野蛮人戒指（空白戒指居中，周围一圈骨头）
+        //   B B B
+        //   B R B
+        //   B B B
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SAVAGE_RING.get())
+                .pattern("BBB")
+                .pattern("BRB")
+                .pattern("BBB")
+                .define('B', Items.BONE)
+                .define('R', ModItems.RING_BLANK.get())
+                .unlockedBy("has_ring_blank", has(ModItems.RING_BLANK.get()))
+                .save(recipeOutput);
+
         // 无序合成： 流明空白戒指 + 流明晶 = 光辉戒指
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GLOW_RING.get())
                 .requires(ModItems.LUMENITE_RING_BLANK.get())

@@ -50,6 +50,7 @@ public class ModLanguageChinese extends LanguageProvider {
         add(ModItems.SLIME_CHARMER_RING.get(), "史莱姆克星戒指");
         add(ModItems.WARRIOR_RING.get(), "战士戒指");
         add(ModItems.VAMPIRE_RING.get(), "吸血戒指");
+        add(ModItems.SAVAGE_RING.get(), "野蛮人戒指");
 
         add("tooltip.stardewaccessories.small_glow_ring", "略微照亮周围");
         add("tooltip.stardewaccessories.glow_ring", "明亮地照亮周围");
@@ -58,6 +59,7 @@ public class ModLanguageChinese extends LanguageProvider {
         add("tooltip.stardewaccessories.slime_charmer_ring", "史莱姆和岩浆怪无法伤害你");
         add("tooltip.stardewaccessories.warrior_ring", "击杀怪物时有概率获得战士能量，提高攻击力");
         add("tooltip.stardewaccessories.vampire_ring", "每击杀一个怪物恢复少量生命");
+        add("tooltip.stardewaccessories.savage_ring", "击杀怪物后短暂提升移动速度");
         add("tooltip.stardewaccessories.requires_lambdynlights", "需要安装 LambDynamicLights");
         add("tooltip.stardewaccessories.not_installed", "未安装时不发光");
 
@@ -79,5 +81,6 @@ public class ModLanguageChinese extends LanguageProvider {
         add("tooltip.stardewaccessories.slime_charmer_ring.desc", "史莱姆见了你，只剩下黏糊糊的亲近");
         add("tooltip.stardewaccessories.warrior_ring.desc", "战意凝成的戒指，斩杀之后仍有余勇");
         add("tooltip.stardewaccessories.vampire_ring.desc", "饮血之戒，斩杀之后生命悄然回流");
+        add("tooltip.stardewaccessories.savage_ring.desc", "骨头串成的戒指，猎物倒下时脚步忽然轻快");
     }
 }

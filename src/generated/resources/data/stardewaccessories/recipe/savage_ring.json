@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:bone"
+    },
+    "R": {
+      "item": "stardewaccessories:ring_blank"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "BRB",
+    "BBB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "stardewaccessories:savage_ring"
+  }
+}

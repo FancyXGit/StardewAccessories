@@ -40,6 +40,7 @@ public class ModCreativeTabs {
                         output.accept(ModItems.SLIME_CHARMER_RING.get());
                         output.accept(ModItems.WARRIOR_RING.get());
                         output.accept(ModItems.VAMPIRE_RING.get());
+                        output.accept(ModItems.SAVAGE_RING.get());
 
                         // 标志
                         output.accept(ModItems.CHICKEN.get());

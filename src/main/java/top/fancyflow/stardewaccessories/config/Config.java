@@ -68,5 +68,13 @@ public class Config {
             .comment("吸血戒指每击杀一个敌对生物恢复的生命值（MC 2.0 = 1 颗心；戴多枚叠加）")
             .defineInRange("vampireRingHealAmount", 2.0, 0.0, 1024.0);
 
+    public static final ModConfigSpec.IntValue SAVAGE_RING_SPEED_DURATION = BUILDER
+            .comment("野蛮人戒指击杀怪物后速度提升的持续时间（tick，20 tick = 1 秒）")
+            .defineInRange("savageRingSpeedDuration", 40, 0, 72000);
+
+    public static final ModConfigSpec.IntValue SAVAGE_RING_SPEED_AMPLIFIER = BUILDER
+            .comment("野蛮人戒指速度提升的等级（0 = 速度 I，1 = 速度 II，以此类推）")
+            .defineInRange("savageRingSpeedAmplifier", 0, 0, 9);
+
     public static final ModConfigSpec SPEC = BUILDER.build();
 }

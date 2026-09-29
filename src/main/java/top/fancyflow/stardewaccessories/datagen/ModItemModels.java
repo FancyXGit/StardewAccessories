@@ -51,6 +51,7 @@ public class ModItemModels extends ItemModelProvider {
         basicItem(ModItems.SLIME_CHARMER_RING.get());
         basicItem(ModItems.WARRIOR_RING.get());
         basicItem(ModItems.VAMPIRE_RING.get());
+        basicItem(ModItems.SAVAGE_RING.get());
         // 方块物品的模型由 ModBlockStates 的 simpleBlockWithItem 生成，不要在这里重复写
     }
 }
