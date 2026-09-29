@@ -1,6 +1,7 @@
 {
   "attribute.name.stardewaccessories.crit_chance": "暴击率",
   "attribute.name.stardewaccessories.crit_damage": "暴击伤害",
+  "effect.stardewaccessories.warrior_energy": "战士能量",
   "item.stardewaccessories.amethyst": "紫水晶",
   "item.stardewaccessories.amethyst_ring": "紫水晶戒指",
   "item.stardewaccessories.aquamarine": "海蓝宝石",
@@ -27,6 +28,7 @@
   "item.stardewaccessories.small_magnet_ring": "小型磁铁戒指",
   "item.stardewaccessories.topaz": "黄水晶",
   "item.stardewaccessories.topaz_ring": "黄水晶戒指",
+  "item.stardewaccessories.warrior_ring": "战士戒指",
   "itemGroup.stardewaccessories": "星露谷饰品",
   "tooltip.stardewaccessories.amethyst_ring.desc": "附魔的紫水晶，挥击时带着一股暗劲",
   "tooltip.stardewaccessories.aquamarine_ring.desc": "一汪附魔的海水，让破绽无处可藏",
@@ -48,5 +50,7 @@
   "tooltip.stardewaccessories.small_glow_ring.desc": "一簇微光，在黑暗里静静亮着",
   "tooltip.stardewaccessories.small_magnet_ring": "吸引附近的物品",
   "tooltip.stardewaccessories.small_magnet_ring.desc": "碎磁石嵌在戒面上，散落的物件会自己找上门来",
-  "tooltip.stardewaccessories.topaz_ring.desc": "戴着这个会感觉安全一点点"
+  "tooltip.stardewaccessories.topaz_ring.desc": "戴着这个会感觉安全一点点",
+  "tooltip.stardewaccessories.warrior_ring": "击杀怪物时有概率获得战士能量，提高攻击力",
+  "tooltip.stardewaccessories.warrior_ring.desc": "战意凝成的戒指，斩杀之后仍有余勇"
 }

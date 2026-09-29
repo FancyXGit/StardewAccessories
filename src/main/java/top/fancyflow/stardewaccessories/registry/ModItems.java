@@ -18,6 +18,7 @@ import top.fancyflow.stardewaccessories.item.SlimeCharmerRing;
 import top.fancyflow.stardewaccessories.item.SmallGlowRing;
 import top.fancyflow.stardewaccessories.item.SmallMagnetRing;
 import top.fancyflow.stardewaccessories.item.TopazRing;
+import top.fancyflow.stardewaccessories.item.WarriorRing;
 
 // 所有物品的注册集中在这里；新增物品时在对应分组下加一行
 public class ModItems {
@@ -86,6 +87,8 @@ public class ModItems {
     public static final DeferredItem<MagnetRing> MAGNET_RING = ITEMS.registerItem("magnet_ring", MagnetRing::new, new Item.Properties().stacksTo(1));
     // 史莱姆克星戒指：佩戴后史莱姆和岩浆怪不再造成伤害；不可堆叠
     public static final DeferredItem<SlimeCharmerRing> SLIME_CHARMER_RING = ITEMS.registerItem("slime_charmer_ring", SlimeCharmerRing::new, new Item.Properties().stacksTo(1));
+    // 战士戒指：击杀敌对生物时有概率获得战士能量（提高攻击力）；不可堆叠
+    public static final DeferredItem<WarriorRing> WARRIOR_RING = ITEMS.registerItem("warrior_ring", WarriorRing::new, new Item.Properties().stacksTo(1));
 
     public static void register(IEventBus modEventBus) {
         ITEMS.register(modEventBus);

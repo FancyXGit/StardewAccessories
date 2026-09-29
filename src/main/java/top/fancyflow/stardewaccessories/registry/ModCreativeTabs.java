@@ -38,6 +38,7 @@ public class ModCreativeTabs {
                         output.accept(ModItems.SMALL_MAGNET_RING.get());
                         output.accept(ModItems.MAGNET_RING.get());
                         output.accept(ModItems.SLIME_CHARMER_RING.get());
+                        output.accept(ModItems.WARRIOR_RING.get());
 
                         // 标志
                         output.accept(ModItems.CHICKEN.get());

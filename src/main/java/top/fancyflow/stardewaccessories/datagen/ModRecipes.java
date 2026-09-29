@@ -117,6 +117,20 @@ public class ModRecipes extends RecipeProvider {
                 .unlockedBy("has_slime_crystal", has(ModItems.SLIME_CRYSTAL.get()))
                 .save(recipeOutput);
 
+        // 有序合成： 战士戒指（金属空白戒指居中，上下下界合金锭，左右红石）
+        //     K
+        //   L J L
+        //     K
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.WARRIOR_RING.get())
+                .pattern(" K ")
+                .pattern("LJL")
+                .pattern(" K ")
+                .define('K', Items.NETHERITE_INGOT)
+                .define('L', Items.REDSTONE)
+                .define('J', ModItems.METAL_RING_BLANK.get())
+                .unlockedBy("has_metal_ring_blank", has(ModItems.METAL_RING_BLANK.get()))
+                .save(recipeOutput);
+
         // 无序合成： 流明空白戒指 + 流明晶 = 光辉戒指
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GLOW_RING.get())
                 .requires(ModItems.LUMENITE_RING_BLANK.get())

@@ -12,6 +12,7 @@ import top.fancyflow.stardewaccessories.config.Config;
 import top.fancyflow.stardewaccessories.registry.ModAttributes;
 import top.fancyflow.stardewaccessories.registry.ModBlocks;
 import top.fancyflow.stardewaccessories.registry.ModCreativeTabs;
+import top.fancyflow.stardewaccessories.registry.ModEffects;
 import top.fancyflow.stardewaccessories.registry.ModItems;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
@@ -27,6 +28,7 @@ public class StardewAccessories {
     public StardewAccessories(IEventBus modEventBus, ModContainer modContainer) {
         // 各注册表统一在这里接入模组事件总线
         ModAttributes.register(modEventBus);
+        ModEffects.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModCreativeTabs.register(modEventBus);

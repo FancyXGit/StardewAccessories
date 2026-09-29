@@ -1,6 +1,7 @@
 {
   "attribute.name.stardewaccessories.crit_chance": "Critical Chance",
   "attribute.name.stardewaccessories.crit_damage": "Critical Damage",
+  "effect.stardewaccessories.warrior_energy": "Warrior Energy",
   "item.stardewaccessories.amethyst": "Amethyst",
   "item.stardewaccessories.amethyst_ring": "Amethyst Ring",
   "item.stardewaccessories.aquamarine": "Aquamarine",
@@ -27,6 +28,7 @@
   "item.stardewaccessories.small_magnet_ring": "Small Magnet Ring",
   "item.stardewaccessories.topaz": "Topaz",
   "item.stardewaccessories.topaz_ring": "Topaz Ring",
+  "item.stardewaccessories.warrior_ring": "Warrior Ring",
   "itemGroup.stardewaccessories": "Stardew Accessories",
   "tooltip.stardewaccessories.amethyst_ring.desc": "Enchanted amethyst, giving every blow a stubborn shove",
   "tooltip.stardewaccessories.aquamarine_ring.desc": "A drop of enchanted sea, leaving no weak point hidden",
@@ -48,5 +50,7 @@
   "tooltip.stardewaccessories.small_glow_ring.desc": "A tiny light, glowing softly in the dark",
   "tooltip.stardewaccessories.small_magnet_ring": "Attracts nearby items",
   "tooltip.stardewaccessories.small_magnet_ring.desc": "Shards of lodestone set in the band; loose things find their way to you",
-  "tooltip.stardewaccessories.topaz_ring.desc": "You feel a little bit safer wearing this"
+  "tooltip.stardewaccessories.topaz_ring.desc": "You feel a little bit safer wearing this",
+  "tooltip.stardewaccessories.warrior_ring": "Chance to gain Warrior Energy when slaying monsters, boosting your attack",
+  "tooltip.stardewaccessories.warrior_ring.desc": "A ring forged from battle spirit, its fury lingering after the kill"
 }

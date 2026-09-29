@@ -17,6 +17,7 @@ public class ModLanguageChinese extends LanguageProvider {
         add("itemGroup.stardewaccessories", "星露谷饰品");
         add("attribute.name.stardewaccessories.crit_chance", "暴击率");
         add("attribute.name.stardewaccessories.crit_damage", "暴击伤害");
+        add("effect.stardewaccessories.warrior_energy", "战士能量");
         add(ModItems.CHICKEN.get(), "可爱小鸡");
 
         add(ModItems.RING_BLANK.get(), "空白戒指");
@@ -45,12 +46,14 @@ public class ModLanguageChinese extends LanguageProvider {
         add(ModItems.SMALL_MAGNET_RING.get(), "小型磁铁戒指");
         add(ModItems.MAGNET_RING.get(), "磁铁戒指");
         add(ModItems.SLIME_CHARMER_RING.get(), "史莱姆克星戒指");
+        add(ModItems.WARRIOR_RING.get(), "战士戒指");
 
         add("tooltip.stardewaccessories.small_glow_ring", "略微照亮周围");
         add("tooltip.stardewaccessories.glow_ring", "明亮地照亮周围");
         add("tooltip.stardewaccessories.small_magnet_ring", "吸引附近的物品");
         add("tooltip.stardewaccessories.magnet_ring", "强力吸引附近的物品");
         add("tooltip.stardewaccessories.slime_charmer_ring", "史莱姆和岩浆怪无法伤害你");
+        add("tooltip.stardewaccessories.warrior_ring", "击杀怪物时有概率获得战士能量，提高攻击力");
         add("tooltip.stardewaccessories.requires_lambdynlights", "需要安装 LambDynamicLights");
         add("tooltip.stardewaccessories.not_installed", "未安装时不发光");
 
@@ -69,5 +72,6 @@ public class ModLanguageChinese extends LanguageProvider {
         add("tooltip.stardewaccessories.small_magnet_ring.desc", "碎磁石嵌在戒面上，散落的物件会自己找上门来");
         add("tooltip.stardewaccessories.magnet_ring.desc", "完整的磁石戒面，散落的物件纷纷聚拢过来");
         add("tooltip.stardewaccessories.slime_charmer_ring.desc", "史莱姆见了你，只剩下黏糊糊的亲近");
+        add("tooltip.stardewaccessories.warrior_ring.desc", "战意凝成的戒指，斩杀之后仍有余勇");
     }
 }

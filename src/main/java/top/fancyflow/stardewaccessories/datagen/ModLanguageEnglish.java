@@ -17,6 +17,7 @@ public class ModLanguageEnglish extends LanguageProvider {
         add("itemGroup.stardewaccessories", "Stardew Accessories");
         add("attribute.name.stardewaccessories.crit_chance", "Critical Chance");
         add("attribute.name.stardewaccessories.crit_damage", "Critical Damage");
+        add("effect.stardewaccessories.warrior_energy", "Warrior Energy");
         add(ModItems.CHICKEN.get(), "Golden Chicken");
 
         add(ModItems.RING_BLANK.get(), "Ring Blank");
@@ -45,12 +46,14 @@ public class ModLanguageEnglish extends LanguageProvider {
         add(ModItems.SMALL_MAGNET_RING.get(), "Small Magnet Ring");
         add(ModItems.MAGNET_RING.get(), "Magnet Ring");
         add(ModItems.SLIME_CHARMER_RING.get(), "Slime Charmer Ring");
+        add(ModItems.WARRIOR_RING.get(), "Warrior Ring");
 
         add("tooltip.stardewaccessories.small_glow_ring", "Slightly lights up the area around you");
         add("tooltip.stardewaccessories.glow_ring", "Brightly lights up the area around you");
         add("tooltip.stardewaccessories.small_magnet_ring", "Attracts nearby items");
         add("tooltip.stardewaccessories.magnet_ring", "Strongly attracts nearby items");
         add("tooltip.stardewaccessories.slime_charmer_ring", "Slimes and magma cubes cannot hurt you");
+        add("tooltip.stardewaccessories.warrior_ring", "Chance to gain Warrior Energy when slaying monsters, boosting your attack");
         add("tooltip.stardewaccessories.requires_lambdynlights", "Requires LambDynamicLights");
         add("tooltip.stardewaccessories.not_installed", "No effect when not installed");
 
@@ -69,5 +72,6 @@ public class ModLanguageEnglish extends LanguageProvider {
         add("tooltip.stardewaccessories.small_magnet_ring.desc", "Shards of lodestone set in the band; loose things find their way to you");
         add("tooltip.stardewaccessories.magnet_ring.desc", "A full lodestone face; loose things hurry into your grasp");
         add("tooltip.stardewaccessories.slime_charmer_ring.desc", "Slimes only want to be your gooey friends now");
+        add("tooltip.stardewaccessories.warrior_ring.desc", "A ring forged from battle spirit, its fury lingering after the kill");
     }
 }

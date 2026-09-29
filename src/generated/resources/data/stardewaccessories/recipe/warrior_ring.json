@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "J": {
+      "item": "stardewaccessories:metal_ring_blank"
+    },
+    "K": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "L": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    " K ",
+    "LJL",
+    " K "
+  ],
+  "result": {
+    "count": 1,
+    "id": "stardewaccessories:warrior_ring"
+  }
+}

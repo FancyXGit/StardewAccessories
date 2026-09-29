@@ -52,5 +52,17 @@ public class Config {
             .comment("磁铁戒指的吸取半径（格）：把周围这个范围内的掉落物吸向玩家")
             .defineInRange("magnetRingRange", 5.0, 0.0, 64.0);
 
+    public static final ModConfigSpec.DoubleValue WARRIOR_RING_PROC_CHANCE = BUILDER
+            .comment("战士戒指击杀敌对生物时获得战士能量的概率（0.10 = 10%；戴多枚各 roll 一次）")
+            .defineInRange("warriorRingProcChance", 0.10, 0.0, 1.0);
+
+    public static final ModConfigSpec.DoubleValue WARRIOR_ENERGY_ATTACK_DAMAGE = BUILDER
+            .comment("战士能量的额外攻击伤害点数（原版星露谷为 +10，直接加到攻击力上）")
+            .defineInRange("warriorEnergyAttackDamage", 10.0, 0.0, 1024.0);
+
+    public static final ModConfigSpec.IntValue WARRIOR_ENERGY_DURATION = BUILDER
+            .comment("战士能量的持续时间（tick，20 tick = 1 秒；原版星露谷为 5 秒）")
+            .defineInRange("warriorEnergyDuration", 100, 0, 72000);
+
     public static final ModConfigSpec SPEC = BUILDER.build();
 }
