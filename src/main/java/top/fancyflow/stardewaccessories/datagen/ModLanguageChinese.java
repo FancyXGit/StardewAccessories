@@ -31,9 +31,11 @@ public class ModLanguageChinese extends LanguageProvider {
         add(ModItems.LUMENITE.get(), "流明晶");
         add(ModItems.LUMENITE_RING_BLANK.get(), "流明空白戒指");
         add(ModItems.METAL_RING_BLANK.get(), "金属空白戒指");
+        add(ModItems.DARK_ALLOY_RING_BLANK.get(), "暗合金空白戒指");
         add(ModItems.MAGNET_FRAGMENTS.get(), "磁石碎块");
         add(ModItems.MAGNET.get(), "磁石");
         add(ModItems.SLIME_CRYSTAL.get(), "史莱姆结晶");
+        add(ModItems.BLOOD_ESSENCE.get(), "血之精华");
 
         add(ModItems.RUBY_RING.get(), "红宝石戒指");
         add(ModItems.EMERALD_RING.get(), "绿宝石戒指");
@@ -47,6 +49,7 @@ public class ModLanguageChinese extends LanguageProvider {
         add(ModItems.MAGNET_RING.get(), "磁铁戒指");
         add(ModItems.SLIME_CHARMER_RING.get(), "史莱姆克星戒指");
         add(ModItems.WARRIOR_RING.get(), "战士戒指");
+        add(ModItems.VAMPIRE_RING.get(), "吸血戒指");
 
         add("tooltip.stardewaccessories.small_glow_ring", "略微照亮周围");
         add("tooltip.stardewaccessories.glow_ring", "明亮地照亮周围");
@@ -54,6 +57,7 @@ public class ModLanguageChinese extends LanguageProvider {
         add("tooltip.stardewaccessories.magnet_ring", "强力吸引附近的物品");
         add("tooltip.stardewaccessories.slime_charmer_ring", "史莱姆和岩浆怪无法伤害你");
         add("tooltip.stardewaccessories.warrior_ring", "击杀怪物时有概率获得战士能量，提高攻击力");
+        add("tooltip.stardewaccessories.vampire_ring", "每击杀一个怪物恢复少量生命");
         add("tooltip.stardewaccessories.requires_lambdynlights", "需要安装 LambDynamicLights");
         add("tooltip.stardewaccessories.not_installed", "未安装时不发光");
 
@@ -69,9 +73,11 @@ public class ModLanguageChinese extends LanguageProvider {
         add("tooltip.stardewaccessories.ring_blank.desc", "一枚素圈，等着被镶上宝石");
         add("tooltip.stardewaccessories.lumenite_ring_blank.desc", "流明晶打磨的戒圈，还留着一丝微光");
         add("tooltip.stardewaccessories.metal_ring_blank.desc", "一枚沉甸甸的金属素圈，隐隐带着磁性");
+        add("tooltip.stardewaccessories.dark_alloy_ring_blank.desc", "幽暗的合金素圈，泛着冷硬的暗光");
         add("tooltip.stardewaccessories.small_magnet_ring.desc", "碎磁石嵌在戒面上，散落的物件会自己找上门来");
         add("tooltip.stardewaccessories.magnet_ring.desc", "完整的磁石戒面，散落的物件纷纷聚拢过来");
         add("tooltip.stardewaccessories.slime_charmer_ring.desc", "史莱姆见了你，只剩下黏糊糊的亲近");
         add("tooltip.stardewaccessories.warrior_ring.desc", "战意凝成的戒指，斩杀之后仍有余勇");
+        add("tooltip.stardewaccessories.vampire_ring.desc", "饮血之戒，斩杀之后生命悄然回流");
     }
 }

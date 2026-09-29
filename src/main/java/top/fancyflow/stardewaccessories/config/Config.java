@@ -64,5 +64,9 @@ public class Config {
             .comment("战士能量的持续时间（tick，20 tick = 1 秒；原版星露谷为 5 秒）")
             .defineInRange("warriorEnergyDuration", 100, 0, 72000);
 
+    public static final ModConfigSpec.DoubleValue VAMPIRE_RING_HEAL_AMOUNT = BUILDER
+            .comment("吸血戒指每击杀一个敌对生物恢复的生命值（MC 2.0 = 1 颗心；戴多枚叠加）")
+            .defineInRange("vampireRingHealAmount", 2.0, 0.0, 1024.0);
+
     public static final ModConfigSpec SPEC = BUILDER.build();
 }

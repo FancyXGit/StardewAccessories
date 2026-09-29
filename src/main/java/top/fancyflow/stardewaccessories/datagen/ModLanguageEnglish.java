@@ -31,9 +31,11 @@ public class ModLanguageEnglish extends LanguageProvider {
         add(ModItems.LUMENITE.get(), "Lumenite");
         add(ModItems.LUMENITE_RING_BLANK.get(), "Lumen Ring Blank");
         add(ModItems.METAL_RING_BLANK.get(), "Metal Ring Blank");
+        add(ModItems.DARK_ALLOY_RING_BLANK.get(), "Dark Alloy Ring Blank");
         add(ModItems.MAGNET_FRAGMENTS.get(), "Magnet Fragments");
         add(ModItems.MAGNET.get(), "Magnet");
         add(ModItems.SLIME_CRYSTAL.get(), "Slime Crystal");
+        add(ModItems.BLOOD_ESSENCE.get(), "Blood Essence");
 
         add(ModItems.RUBY_RING.get(), "Ruby Ring");
         add(ModItems.EMERALD_RING.get(), "Emerald Ring");
@@ -47,6 +49,7 @@ public class ModLanguageEnglish extends LanguageProvider {
         add(ModItems.MAGNET_RING.get(), "Magnet Ring");
         add(ModItems.SLIME_CHARMER_RING.get(), "Slime Charmer Ring");
         add(ModItems.WARRIOR_RING.get(), "Warrior Ring");
+        add(ModItems.VAMPIRE_RING.get(), "Vampire Ring");
 
         add("tooltip.stardewaccessories.small_glow_ring", "Slightly lights up the area around you");
         add("tooltip.stardewaccessories.glow_ring", "Brightly lights up the area around you");
@@ -54,6 +57,7 @@ public class ModLanguageEnglish extends LanguageProvider {
         add("tooltip.stardewaccessories.magnet_ring", "Strongly attracts nearby items");
         add("tooltip.stardewaccessories.slime_charmer_ring", "Slimes and magma cubes cannot hurt you");
         add("tooltip.stardewaccessories.warrior_ring", "Chance to gain Warrior Energy when slaying monsters, boosting your attack");
+        add("tooltip.stardewaccessories.vampire_ring", "Restores a little health whenever you slay a monster");
         add("tooltip.stardewaccessories.requires_lambdynlights", "Requires LambDynamicLights");
         add("tooltip.stardewaccessories.not_installed", "No effect when not installed");
 
@@ -69,9 +73,11 @@ public class ModLanguageEnglish extends LanguageProvider {
         add("tooltip.stardewaccessories.ring_blank.desc", "A plain band, waiting for a gem");
         add("tooltip.stardewaccessories.lumenite_ring_blank.desc", "A lumenite band, still holding a trace of light");
         add("tooltip.stardewaccessories.metal_ring_blank.desc", "A weighty metal band, faintly humming with magnetism");
+        add("tooltip.stardewaccessories.dark_alloy_ring_blank.desc", "A darkly gleaming band of cold alloy");
         add("tooltip.stardewaccessories.small_magnet_ring.desc", "Shards of lodestone set in the band; loose things find their way to you");
         add("tooltip.stardewaccessories.magnet_ring.desc", "A full lodestone face; loose things hurry into your grasp");
         add("tooltip.stardewaccessories.slime_charmer_ring.desc", "Slimes only want to be your gooey friends now");
         add("tooltip.stardewaccessories.warrior_ring.desc", "A ring forged from battle spirit, its fury lingering after the kill");
+        add("tooltip.stardewaccessories.vampire_ring.desc", "A blood-drinking band that returns life with every kill");
     }
 }

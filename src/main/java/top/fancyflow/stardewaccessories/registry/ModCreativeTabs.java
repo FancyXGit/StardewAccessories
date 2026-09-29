@@ -39,6 +39,7 @@ public class ModCreativeTabs {
                         output.accept(ModItems.MAGNET_RING.get());
                         output.accept(ModItems.SLIME_CHARMER_RING.get());
                         output.accept(ModItems.WARRIOR_RING.get());
+                        output.accept(ModItems.VAMPIRE_RING.get());
 
                         // 标志
                         output.accept(ModItems.CHICKEN.get());
@@ -48,6 +49,7 @@ public class ModCreativeTabs {
                         output.accept(ModItems.RING_BLANK.get());
                         output.accept(ModItems.LUMENITE_RING_BLANK.get());
                         output.accept(ModItems.METAL_RING_BLANK.get());
+                        output.accept(ModItems.DARK_ALLOY_RING_BLANK.get());
                         // 矿石材料
                         output.accept(ModItems.RUBY.get());
                         output.accept(ModItems.EMERALD.get());
@@ -60,6 +62,7 @@ public class ModCreativeTabs {
                         output.accept(ModItems.MAGNET_FRAGMENTS.get());
                         output.accept(ModItems.MAGNET.get());
                         output.accept(ModItems.SLIME_CRYSTAL.get());
+                        output.accept(ModItems.BLOOD_ESSENCE.get());
 
                     })
                     .build());

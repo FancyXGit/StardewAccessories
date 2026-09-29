@@ -18,6 +18,7 @@ import top.fancyflow.stardewaccessories.item.SlimeCharmerRing;
 import top.fancyflow.stardewaccessories.item.SmallGlowRing;
 import top.fancyflow.stardewaccessories.item.SmallMagnetRing;
 import top.fancyflow.stardewaccessories.item.TopazRing;
+import top.fancyflow.stardewaccessories.item.VampireRing;
 import top.fancyflow.stardewaccessories.item.WarriorRing;
 
 // 所有物品的注册集中在这里；新增物品时在对应分组下加一行
@@ -57,12 +58,18 @@ public class ModItems {
     public static final DeferredItem<DescribedItem> METAL_RING_BLANK = ITEMS.registerItem("metal_ring_blank",
             properties -> new DescribedItem(properties, "tooltip.stardewaccessories.metal_ring_blank.desc"),
             new Item.Properties());
+    // 暗合金空白戒指（材料，由空白戒指 + 下界合金锭合成）
+    public static final DeferredItem<DescribedItem> DARK_ALLOY_RING_BLANK = ITEMS.registerItem("dark_alloy_ring_blank",
+            properties -> new DescribedItem(properties, "tooltip.stardewaccessories.dark_alloy_ring_blank.desc"),
+            new Item.Properties());
     // 磁石碎块（暂时只能从创造栏获取，来源以后再定）
     public static final DeferredItem<Item> MAGNET_FRAGMENTS = ITEMS.registerSimpleItem("magnet_fragments", new Item.Properties());
     // 磁石（由 4 个磁石碎块合成）
     public static final DeferredItem<Item> MAGNET = ITEMS.registerSimpleItem("magnet", new Item.Properties());
     // 史莱姆结晶（暂时只能从创造栏获取，来源以后再定）
     public static final DeferredItem<Item> SLIME_CRYSTAL = ITEMS.registerSimpleItem("slime_crystal", new Item.Properties());
+    // 血之精华（暂时只能从创造栏获取，来源以后再定）
+    public static final DeferredItem<Item> BLOOD_ESSENCE = ITEMS.registerSimpleItem("blood_essence", new Item.Properties());
 
     // 戒指
     // 红宝石戒指：加10%伤害；不可堆叠
@@ -89,6 +96,8 @@ public class ModItems {
     public static final DeferredItem<SlimeCharmerRing> SLIME_CHARMER_RING = ITEMS.registerItem("slime_charmer_ring", SlimeCharmerRing::new, new Item.Properties().stacksTo(1));
     // 战士戒指：击杀敌对生物时有概率获得战士能量（提高攻击力）；不可堆叠
     public static final DeferredItem<WarriorRing> WARRIOR_RING = ITEMS.registerItem("warrior_ring", WarriorRing::new, new Item.Properties().stacksTo(1));
+    // 吸血戒指：每击杀一个敌对生物恢复少量生命；不可堆叠
+    public static final DeferredItem<VampireRing> VAMPIRE_RING = ITEMS.registerItem("vampire_ring", VampireRing::new, new Item.Properties().stacksTo(1));
 
     public static void register(IEventBus modEventBus) {
         ITEMS.register(modEventBus);

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "stardewaccessories:dark_alloy_ring_blank"
+    },
+    {
+      "item": "stardewaccessories:blood_essence"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "stardewaccessories:vampire_ring"
+  }
+}

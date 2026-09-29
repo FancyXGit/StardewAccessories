@@ -131,6 +131,20 @@ public class ModRecipes extends RecipeProvider {
                 .unlockedBy("has_metal_ring_blank", has(ModItems.METAL_RING_BLANK.get()))
                 .save(recipeOutput);
 
+        // 无序合成： 空白戒指 + 下界合金锭 = 暗合金空白戒指
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.DARK_ALLOY_RING_BLANK.get())
+                .requires(ModItems.RING_BLANK.get())
+                .requires(Items.NETHERITE_INGOT)
+                .unlockedBy("has_netherite_ingot", has(Items.NETHERITE_INGOT))
+                .save(recipeOutput);
+
+        // 无序合成： 暗合金空白戒指 + 血之精华 = 吸血戒指
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.VAMPIRE_RING.get())
+                .requires(ModItems.DARK_ALLOY_RING_BLANK.get())
+                .requires(ModItems.BLOOD_ESSENCE.get())
+                .unlockedBy("has_blood_essence", has(ModItems.BLOOD_ESSENCE.get()))
+                .save(recipeOutput);
+
         // 无序合成： 流明空白戒指 + 流明晶 = 光辉戒指
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GLOW_RING.get())
                 .requires(ModItems.LUMENITE_RING_BLANK.get())
