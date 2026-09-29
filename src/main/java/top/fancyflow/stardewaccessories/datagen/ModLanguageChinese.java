@@ -4,6 +4,7 @@ import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.LanguageProvider;
 
 import top.fancyflow.stardewaccessories.StardewAccessories;
+import top.fancyflow.stardewaccessories.registry.ModBlocks;
 import top.fancyflow.stardewaccessories.registry.ModItems;
 
 // 生成 assets/stardewaccessories/lang/zh_cn.json
@@ -36,6 +37,14 @@ public class ModLanguageChinese extends LanguageProvider {
         add(ModItems.MAGNET.get(), "磁石");
         add(ModItems.SLIME_CRYSTAL.get(), "史莱姆结晶");
         add(ModItems.BLOOD_ESSENCE.get(), "血之精华");
+
+        // 矿石
+        add(ModBlocks.STARSHARD_ORE.get(), "星陨矿石");
+        add(ModBlocks.DEEPSLATE_STARSHARD_ORE.get(), "深板岩星陨矿石");
+        add(ModBlocks.PRISM_ORE.get(), "彩晶矿石");
+        add(ModBlocks.DEEPSLATE_PRISM_ORE.get(), "深板岩彩晶矿石");
+        add(ModItems.STARSHARD.get(), "星之碎片");
+        add(ModItems.STARSHARD_INGOT.get(), "星陨锭");
 
         add(ModItems.RUBY_RING.get(), "红宝石戒指");
         add(ModItems.EMERALD_RING.get(), "绿宝石戒指");

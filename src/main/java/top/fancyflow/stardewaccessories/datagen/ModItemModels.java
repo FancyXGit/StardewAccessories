@@ -36,6 +36,8 @@ public class ModItemModels extends ItemModelProvider {
         basicItem(ModItems.MAGNET.get());
         basicItem(ModItems.SLIME_CRYSTAL.get());
         basicItem(ModItems.BLOOD_ESSENCE.get());
+        basicItem(ModItems.STARSHARD.get());
+        basicItem(ModItems.STARSHARD_INGOT.get());
 
         // 戒指
         basicItem(ModItems.RUBY_RING.get());

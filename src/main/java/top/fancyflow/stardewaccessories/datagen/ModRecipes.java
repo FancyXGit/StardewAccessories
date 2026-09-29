@@ -187,5 +187,26 @@ public class ModRecipes extends RecipeProvider {
                 .unlockedBy("has_small_magnet_ring", has(ModItems.SMALL_MAGNET_RING.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(
                         StardewAccessories.MODID, "magnet_ring_from_small_magnet_ring"));
+
+        // 熔炼： 星之碎片 = 星陨锭
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.STARSHARD.get()),
+                        RecipeCategory.MISC, ModItems.STARSHARD_INGOT.get(), 0.7F, 200)
+                .unlockedBy("has_starshard", has(ModItems.STARSHARD.get()))
+                .save(recipeOutput);
+
+        // 高炉： 星之碎片 = 星陨锭（更快；独立 id 避免覆盖熔炼配方）
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ModItems.STARSHARD.get()),
+                        RecipeCategory.MISC, ModItems.STARSHARD_INGOT.get(), 0.7F, 100)
+                .unlockedBy("has_starshard", has(ModItems.STARSHARD.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(
+                        StardewAccessories.MODID, "starshard_ingot_from_blasting"));
+
+        // 无序合成： 星陨锭 + 2 铜锭 + 2 铁锭 = 空白戒指
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RING_BLANK.get())
+                .requires(ModItems.STARSHARD_INGOT.get())
+                .requires(Items.COPPER_INGOT, 2)
+                .requires(Items.IRON_INGOT, 2)
+                .unlockedBy("has_starshard_ingot", has(ModItems.STARSHARD_INGOT.get()))
+                .save(recipeOutput);
     }
 }

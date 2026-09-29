@@ -65,6 +65,14 @@ public class ModCreativeTabs {
                         output.accept(ModItems.SLIME_CRYSTAL.get());
                         output.accept(ModItems.BLOOD_ESSENCE.get());
 
+                        // 矿石
+                        output.accept(ModItems.STARSHARD_ORE.get());
+                        output.accept(ModItems.DEEPSLATE_STARSHARD_ORE.get());
+                        output.accept(ModItems.PRISM_ORE.get());
+                        output.accept(ModItems.DEEPSLATE_PRISM_ORE.get());
+                        output.accept(ModItems.STARSHARD.get());
+                        output.accept(ModItems.STARSHARD_INGOT.get());
+
                     })
                     .build());
 

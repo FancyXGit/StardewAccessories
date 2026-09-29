@@ -1,5 +1,6 @@
 package top.fancyflow.stardewaccessories.registry;
 
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -71,6 +72,16 @@ public class ModItems {
     public static final DeferredItem<Item> SLIME_CRYSTAL = ITEMS.registerSimpleItem("slime_crystal", new Item.Properties());
     // 血之精华（暂时只能从创造栏获取，来源以后再定）
     public static final DeferredItem<Item> BLOOD_ESSENCE = ITEMS.registerSimpleItem("blood_essence", new Item.Properties());
+
+    // 矿石方块（物品形式，实际方块在 ModBlocks）
+    public static final DeferredItem<BlockItem> STARSHARD_ORE = ITEMS.registerSimpleBlockItem(ModBlocks.STARSHARD_ORE);
+    public static final DeferredItem<BlockItem> DEEPSLATE_STARSHARD_ORE = ITEMS.registerSimpleBlockItem(ModBlocks.DEEPSLATE_STARSHARD_ORE);
+    public static final DeferredItem<BlockItem> PRISM_ORE = ITEMS.registerSimpleBlockItem(ModBlocks.PRISM_ORE);
+    public static final DeferredItem<BlockItem> DEEPSLATE_PRISM_ORE = ITEMS.registerSimpleBlockItem(ModBlocks.DEEPSLATE_PRISM_ORE);
+    // 星之碎片（星陨矿石掉落）
+    public static final DeferredItem<Item> STARSHARD = ITEMS.registerSimpleItem("starshard", new Item.Properties());
+    // 星陨锭（由星之碎片熔炼）
+    public static final DeferredItem<Item> STARSHARD_INGOT = ITEMS.registerSimpleItem("starshard_ingot", new Item.Properties());
 
     // 戒指
     // 红宝石戒指：加10%伤害；不可堆叠

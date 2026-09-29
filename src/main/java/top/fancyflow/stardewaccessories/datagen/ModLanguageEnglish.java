@@ -4,6 +4,7 @@ import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.LanguageProvider;
 
 import top.fancyflow.stardewaccessories.StardewAccessories;
+import top.fancyflow.stardewaccessories.registry.ModBlocks;
 import top.fancyflow.stardewaccessories.registry.ModItems;
 
 // 生成 assets/stardewaccessories/lang/en_us.json
@@ -36,6 +37,14 @@ public class ModLanguageEnglish extends LanguageProvider {
         add(ModItems.MAGNET.get(), "Magnet");
         add(ModItems.SLIME_CRYSTAL.get(), "Slime Crystal");
         add(ModItems.BLOOD_ESSENCE.get(), "Blood Essence");
+
+        // Ores
+        add(ModBlocks.STARSHARD_ORE.get(), "Starshard Ore");
+        add(ModBlocks.DEEPSLATE_STARSHARD_ORE.get(), "Deepslate Starshard Ore");
+        add(ModBlocks.PRISM_ORE.get(), "Prism Ore");
+        add(ModBlocks.DEEPSLATE_PRISM_ORE.get(), "Deepslate Prism Ore");
+        add(ModItems.STARSHARD.get(), "Starshard");
+        add(ModItems.STARSHARD_INGOT.get(), "Starshard Ingot");
 
         add(ModItems.RUBY_RING.get(), "Ruby Ring");
         add(ModItems.EMERALD_RING.get(), "Emerald Ring");

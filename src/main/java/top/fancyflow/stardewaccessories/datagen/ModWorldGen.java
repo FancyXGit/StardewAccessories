@@ -38,6 +38,7 @@ import net.neoforged.neoforge.common.world.BiomeModifiers;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 
 import top.fancyflow.stardewaccessories.StardewAccessories;
+import top.fancyflow.stardewaccessories.registry.ModBlocks;
 
 // 用 datagen 生成世界生成注册表：
 //   ① ConfiguredFeature  生成什么（矿脉大小、替换哪些方块）
@@ -48,32 +49,57 @@ import top.fancyflow.stardewaccessories.StardewAccessories;
 public class ModWorldGen extends DatapackBuiltinEntriesProvider {
 
     // ===================== 矿石生成配置区（加矿石只改这里） =====================
-    // 一条 = 一种"矿脉"。石头版和深板岩版各算一条，可分别控制高度/数量/大小。
+    // 一条 = 一种"矿脉"。石头版和深板岩版写成 targets 列表，会生成到同一个 ConfiguredFeature 里，
+    // 矿脉可以自然跨越石头/深板岩交界。
     //   name          特征名，同时用作 3 个 JSON 的文件名（configured / placed / biome_modifier）
-    //   ore           产出的矿石方块
-    //   replaceable   能被替换的方块（STONE_ORE_REPLACEABLES = 所有石头类）
+    //   targets       多个"替换目标"：在 replaceable 标记的方块里生成对应矿石
     //   veinSize      一条矿脉最多几块
     //   veinsPerChunk 每个区块尝试生成几次
     //   height        高度分布规则
     //   discardChanceOnAirExposure  挨着空气时被丢弃的概率（0=可裸露在洞穴，1=完全埋藏）
+    private record OreTarget(TagKey<Block> replaceable, Supplier<Block> ore) {
+    }
+
     private record OreVein(
             String name,
-            Supplier<Block> ore,
-            TagKey<Block> replaceable,
+            List<OreTarget> targets,
             int veinSize,
             int veinsPerChunk,
             PlacementModifier height,
             float discardChanceOnAirExposure
     ) {
         // 便捷构造：不写空气暴露参数时默认 0.0
-        OreVein(String name, Supplier<Block> ore, TagKey<Block> replaceable,
+        OreVein(String name, List<OreTarget> targets,
                 int veinSize, int veinsPerChunk, PlacementModifier height) {
-            this(name, ore, replaceable, veinSize, veinsPerChunk, height, 0.0F);
+            this(name, targets, veinSize, veinsPerChunk, height, 0.0F);
         }
     }
 
-    private static final List<OreVein> ORE_VEINS = List.of(
+    // 石头版 + 深板岩版写进同一个 target 列表的快捷构造
+    private static List<OreTarget> stoneAndDeepslate(Supplier<Block> stoneOre, Supplier<Block> deepslateOre) {
+        return List.of(
+                new OreTarget(BlockTags.STONE_ORE_REPLACEABLES, stoneOre),
+                new OreTarget(BlockTags.DEEPSLATE_ORE_REPLACEABLES, deepslateOre));
+    }
 
+    private static final List<OreVein> ORE_VEINS = List.of(
+            // 星陨矿石：稀有，深层为主，浅层零星；一次只生成一个方块
+            new OreVein("starshard_ore_deep",
+                    stoneAndDeepslate(ModBlocks.STARSHARD_ORE, ModBlocks.DEEPSLATE_STARSHARD_ORE),
+                    1, 4,
+                    HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(24)),
+                    0.25F),
+            new OreVein("starshard_ore_shallow",
+                    stoneAndDeepslate(ModBlocks.STARSHARD_ORE, ModBlocks.DEEPSLATE_STARSHARD_ORE),
+                    1, 1,
+                    HeightRangePlacement.uniform(VerticalAnchor.absolute(24), VerticalAnchor.absolute(64)),
+                    0.25F),
+            // 彩晶矿石：与钻石主矿脉相当，深层
+            new OreVein("prism_ore",
+                    stoneAndDeepslate(ModBlocks.PRISM_ORE, ModBlocks.DEEPSLATE_PRISM_ORE),
+                    3, 7,
+                    HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(16)),
+                    0.5F)
     );
     // ==========================================================================
 
@@ -90,13 +116,13 @@ public class ModWorldGen extends DatapackBuiltinEntriesProvider {
     // ① 生成什么：把每条矿脉变成一个 ConfiguredFeature
     private static void configuredFeatures(BootstrapContext<ConfiguredFeature<?, ?>> context) {
         for (OreVein vein : ORE_VEINS) {
+            List<OreConfiguration.TargetBlockState> targets = vein.targets().stream()
+                    .map(target -> OreConfiguration.target(
+                            new TagMatchTest(target.replaceable()),
+                            target.ore().get().defaultBlockState()))
+                    .toList();
             context.register(configuredKey(vein.name()), new ConfiguredFeature<>(Feature.ORE,
-                    new OreConfiguration(
-                            List.of(OreConfiguration.target(
-                                    new TagMatchTest(vein.replaceable()),
-                                    vein.ore().get().defaultBlockState())),
-                            vein.veinSize(),
-                            vein.discardChanceOnAirExposure())));
+                    new OreConfiguration(targets, vein.veinSize(), vein.discardChanceOnAirExposure())));
         }
     }
 
