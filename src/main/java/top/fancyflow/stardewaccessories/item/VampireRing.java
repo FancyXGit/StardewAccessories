@@ -9,7 +9,7 @@ import net.minecraft.world.item.ItemStack;
 
 import top.theillusivec4.curios.api.type.capability.ICurioItem;
 
-// 吸血戒指：每击杀一个敌对生物恢复少量生命（效果见 VampireRingEvents）
+// 吸血戒指：每击杀一个敌对生物恢复少量生命（效果见 MonsterKillEvents）
 public class VampireRing extends DescribedItem implements ICurioItem {
 
     public VampireRing(Item.Properties properties) {

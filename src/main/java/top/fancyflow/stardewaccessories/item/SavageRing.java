@@ -9,7 +9,7 @@ import net.minecraft.world.item.ItemStack;
 
 import top.theillusivec4.curios.api.type.capability.ICurioItem;
 
-// 野蛮人戒指：每击杀一个敌对生物获得短时间速度提升（效果见 SavageRingEvents）
+// 野蛮人戒指：每击杀一个敌对生物获得短时间速度提升（效果见 MonsterKillEvents）
 public class SavageRing extends DescribedItem implements ICurioItem {
 
     public SavageRing(Item.Properties properties) {
