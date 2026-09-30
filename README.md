@@ -5,7 +5,7 @@ materials, wear them in [Curios](https://modrinth.com/mod/curios) ring slots, an
 
 [English](#english) | [简体中文](#简体中文)
 
-![Stardew Accessories](src\main\resources\icon.png)
+![Stardew Accessories](docs/screenshots/icon.png)
 
 ![Minecraft](https://img.shields.io/badge/Minecraft-1.21.1-62b47a)
 ![Loader](https://img.shields.io/badge/Loader-NeoForge-orange)
