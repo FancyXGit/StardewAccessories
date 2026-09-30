@@ -76,6 +76,14 @@ public class Config {
             .comment("野蛮人戒指速度提升的等级（0 = 速度 I，1 = 速度 II，以此类推）")
             .defineInRange("savageRingSpeedAmplifier", 0, 0, 9);
 
+    public static final ModConfigSpec.DoubleValue RING_OF_YOBA_PROC_CHANCE = BUILDER
+            .comment("由巴的戒指受到伤害后获得由巴祝福的概率（0.05 = 5%；戴多枚各 roll 一次）")
+            .defineInRange("ringOfYobaProcChance", 0.05, 0.0, 1.0);
+
+    public static final ModConfigSpec.IntValue YOBAS_BLESSING_DURATION = BUILDER
+            .comment("由巴祝福的持续时间（tick，20 tick = 1 秒；原版星露谷约 5 秒）")
+            .defineInRange("yobasBlessingDuration", 100, 0, 72000);
+
     // ===== 材料掉落概率 =====
 
     public static final ModConfigSpec.DoubleValue LUMEN_DUST_GLOWSTONE_CHANCE = BUILDER

@@ -15,6 +15,7 @@ import top.fancyflow.stardewaccessories.item.GlowRing;
 import top.fancyflow.stardewaccessories.item.JadeRing;
 import top.fancyflow.stardewaccessories.item.MagnetRing;
 import top.fancyflow.stardewaccessories.item.MaterialItem;
+import top.fancyflow.stardewaccessories.item.RingOfYoba;
 import top.fancyflow.stardewaccessories.item.RubyRing;
 import top.fancyflow.stardewaccessories.item.SavageRing;
 import top.fancyflow.stardewaccessories.item.SlimeCharmerRing;
@@ -121,6 +122,8 @@ public class ModItems {
     public static final DeferredItem<VampireRing> VAMPIRE_RING = ITEMS.registerItem("vampire_ring", VampireRing::new, new Item.Properties().stacksTo(1));
     // 野蛮人戒指：每击杀一个敌对生物获得短时间速度提升；不可堆叠
     public static final DeferredItem<SavageRing> SAVAGE_RING = ITEMS.registerItem("savage_ring", SavageRing::new, new Item.Properties().stacksTo(1));
+    // 由巴的戒指：受到伤害时有概率获得由巴的祝福（短时间内免疫伤害）；不可堆叠
+    public static final DeferredItem<RingOfYoba> RING_OF_YOBA = ITEMS.registerItem("ring_of_yoba", RingOfYoba::new, new Item.Properties().stacksTo(1));
 
     public static void register(IEventBus modEventBus) {
         ITEMS.register(modEventBus);

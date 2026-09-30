@@ -19,6 +19,7 @@ public class ModLanguageEnglish extends LanguageProvider {
         add("attribute.name.stardewaccessories.crit_chance", "Critical Chance");
         add("attribute.name.stardewaccessories.crit_damage", "Critical Damage");
         add("effect.stardewaccessories.warrior_energy", "Warrior Energy");
+        add("effect.stardewaccessories.yobas_blessing", "Yoba's Blessing");
         add(ModItems.CHICKEN.get(), "Golden Chicken");
 
         add(ModItems.RING_BLANK.get(), "Ring Blank");
@@ -60,6 +61,7 @@ public class ModLanguageEnglish extends LanguageProvider {
         add(ModItems.WARRIOR_RING.get(), "Warrior Ring");
         add(ModItems.VAMPIRE_RING.get(), "Vampire Ring");
         add(ModItems.SAVAGE_RING.get(), "Savage Ring");
+        add(ModItems.RING_OF_YOBA.get(), "Ring of Yoba");
 
         add("tooltip.stardewaccessories.small_glow_ring", "Slightly lights up the area around you");
         add("tooltip.stardewaccessories.glow_ring", "Brightly lights up the area around you");
@@ -69,6 +71,7 @@ public class ModLanguageEnglish extends LanguageProvider {
         add("tooltip.stardewaccessories.warrior_ring", "Chance to gain Warrior Energy when slaying monsters, boosting your attack");
         add("tooltip.stardewaccessories.vampire_ring", "Restores a little health whenever you slay a monster");
         add("tooltip.stardewaccessories.savage_ring", "Gain a short speed boost after slaying a monster");
+        add("tooltip.stardewaccessories.ring_of_yoba", "Chance to gain Yoba's Blessing when hurt, granting brief immunity to damage");
         add("tooltip.stardewaccessories.requires_lambdynlights", "Requires LambDynamicLights");
         add("tooltip.stardewaccessories.not_installed", "No effect when not installed");
 
@@ -97,5 +100,6 @@ public class ModLanguageEnglish extends LanguageProvider {
         add("tooltip.stardewaccessories.warrior_ring.desc", "A ring forged from battle spirit, its fury lingering after the kill");
         add("tooltip.stardewaccessories.vampire_ring.desc", "A blood-drinking band that returns life with every kill");
         add("tooltip.stardewaccessories.savage_ring.desc", "A ring strung with bone; your stride quickens when prey falls");
+        add("tooltip.stardewaccessories.ring_of_yoba.desc", "A ring formed of Yoba's protection, granting a moment of unbreakable resolve in times of peril");
     }
 }

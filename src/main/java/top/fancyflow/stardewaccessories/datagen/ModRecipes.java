@@ -158,6 +158,20 @@ public class ModRecipes extends RecipeProvider {
                 .unlockedBy("has_ring_blank", has(ModItems.RING_BLANK.get()))
                 .save(recipeOutput);
 
+        // 有序合成： 由巴的戒指（流明空白戒指居中，附魔金苹果在最上方，其余一圈金锭）
+        //   G A G
+        //   G R G
+        //   G G G
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.RING_OF_YOBA.get())
+                .pattern("GAG")
+                .pattern("GRG")
+                .pattern("GGG")
+                .define('G', Items.GOLD_INGOT)
+                .define('A', Items.ENCHANTED_GOLDEN_APPLE)
+                .define('R', ModItems.LUMENITE_RING_BLANK.get())
+                .unlockedBy("has_lumenite_ring_blank", has(ModItems.LUMENITE_RING_BLANK.get()))
+                .save(recipeOutput);
+
         // 无序合成： 流明空白戒指 + 流明晶 = 光辉戒指
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GLOW_RING.get())
                 .requires(ModItems.LUMENITE_RING_BLANK.get())

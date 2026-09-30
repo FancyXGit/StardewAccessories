@@ -41,6 +41,7 @@ public class ModCreativeTabs {
                         output.accept(ModItems.WARRIOR_RING.get());
                         output.accept(ModItems.VAMPIRE_RING.get());
                         output.accept(ModItems.SAVAGE_RING.get());
+                        output.accept(ModItems.RING_OF_YOBA.get());
 
                         // 标志
                         output.accept(ModItems.CHICKEN.get());
