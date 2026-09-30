@@ -40,6 +40,7 @@ public class ModItemTags extends ItemTagsProvider {
         tag(CuriosTags.RING).add(ModItems.VAMPIRE_RING.get());
         tag(CuriosTags.RING).add(ModItems.SAVAGE_RING.get());
         tag(CuriosTags.RING).add(ModItems.RING_OF_YOBA.get());
+        tag(CuriosTags.RING).add(ModItems.BURGLARS_RING.get());
         // 想让物品任何槽都能放，用通用标签：tag(CuriosTags.CURIO).add(...);
     }
 }

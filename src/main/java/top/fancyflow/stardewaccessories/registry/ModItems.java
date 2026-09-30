@@ -9,6 +9,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import top.fancyflow.stardewaccessories.StardewAccessories;
 import top.fancyflow.stardewaccessories.item.AmethystRing;
 import top.fancyflow.stardewaccessories.item.AquamarineRing;
+import top.fancyflow.stardewaccessories.item.BurglarsRing;
 import top.fancyflow.stardewaccessories.item.DescribedItem;
 import top.fancyflow.stardewaccessories.item.EmeraldRing;
 import top.fancyflow.stardewaccessories.item.GlowRing;
@@ -124,6 +125,8 @@ public class ModItems {
     public static final DeferredItem<SavageRing> SAVAGE_RING = ITEMS.registerItem("savage_ring", SavageRing::new, new Item.Properties().stacksTo(1));
     // 由巴的戒指：受到伤害时有概率获得由巴的祝福（短时间内免疫伤害）；不可堆叠
     public static final DeferredItem<RingOfYoba> RING_OF_YOBA = ITEMS.registerItem("ring_of_yoba", RingOfYoba::new, new Item.Properties().stacksTo(1));
+    // 窃贼戒指：击杀敌对怪物时有概率获得额外掉落（近似抢夺I）；不可堆叠
+    public static final DeferredItem<BurglarsRing> BURGLARS_RING = ITEMS.registerItem("burglars_ring", BurglarsRing::new, new Item.Properties().stacksTo(1));
 
     public static void register(IEventBus modEventBus) {
         ITEMS.register(modEventBus);

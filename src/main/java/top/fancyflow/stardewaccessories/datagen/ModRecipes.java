@@ -172,6 +172,14 @@ public class ModRecipes extends RecipeProvider {
                 .unlockedBy("has_lumenite_ring_blank", has(ModItems.LUMENITE_RING_BLANK.get()))
                 .save(recipeOutput);
 
+        // 无序合成： 金属空白戒指 + 绿宝石 + 金锭 = 窃贼戒指
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BURGLARS_RING.get())
+                .requires(ModItems.METAL_RING_BLANK.get())
+                .requires(ModItems.EMERALD.get())
+                .requires(Items.GOLD_INGOT)
+                .unlockedBy("has_emerald", has(ModItems.EMERALD.get()))
+                .save(recipeOutput);
+
         // 无序合成： 流明空白戒指 + 流明晶 = 光辉戒指
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GLOW_RING.get())
                 .requires(ModItems.LUMENITE_RING_BLANK.get())

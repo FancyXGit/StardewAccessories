@@ -84,6 +84,10 @@ public class Config {
             .comment("由巴祝福的持续时间（tick，20 tick = 1 秒；原版星露谷约 5 秒）")
             .defineInRange("yobasBlessingDuration", 100, 0, 72000);
 
+    public static final ModConfigSpec.DoubleValue BURGLARS_RING_EXTRA_DROP_CHANCE = BUILDER
+            .comment("窃贼戒指给每个可堆叠掉落的额外 +1 概率（0.5 = 50%，近似抢夺I；不可堆叠的装备不受影响）")
+            .defineInRange("burglarsRingExtraDropChance", 0.5, 0.0, 1.0);
+
     // ===== 材料掉落概率 =====
 
     public static final ModConfigSpec.DoubleValue LUMEN_DUST_GLOWSTONE_CHANCE = BUILDER

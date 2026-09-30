@@ -62,6 +62,7 @@ public class ModLanguageChinese extends LanguageProvider {
         add(ModItems.VAMPIRE_RING.get(), "吸血戒指");
         add(ModItems.SAVAGE_RING.get(), "野蛮人戒指");
         add(ModItems.RING_OF_YOBA.get(), "由巴的戒指");
+        add(ModItems.BURGLARS_RING.get(), "窃贼戒指");
 
         add("tooltip.stardewaccessories.small_glow_ring", "略微照亮周围");
         add("tooltip.stardewaccessories.glow_ring", "明亮地照亮周围");
@@ -72,6 +73,7 @@ public class ModLanguageChinese extends LanguageProvider {
         add("tooltip.stardewaccessories.vampire_ring", "每击杀一个怪物恢复少量生命");
         add("tooltip.stardewaccessories.savage_ring", "击杀怪物后短暂提升移动速度");
         add("tooltip.stardewaccessories.ring_of_yoba", "受到伤害时有概率获得由巴的祝福，短时间内免疫伤害");
+        add("tooltip.stardewaccessories.burglars_ring", "击杀怪物时更常掉落额外战利品");
         add("tooltip.stardewaccessories.requires_lambdynlights", "需要安装 LambDynamicLights");
         add("tooltip.stardewaccessories.not_installed", "未安装时不发光");
 
@@ -101,5 +103,6 @@ public class ModLanguageChinese extends LanguageProvider {
         add("tooltip.stardewaccessories.vampire_ring.desc", "饮血之戒，斩杀之后生命悄然回流");
         add("tooltip.stardewaccessories.savage_ring.desc", "骨头串成的戒指，猎物倒下时脚步忽然轻快");
         add("tooltip.stardewaccessories.ring_of_yoba.desc", "由巴的庇护凝成的戒指，危难时会赐下一瞬的不破之身");
+        add("tooltip.stardewaccessories.burglars_ring.desc", "指节沾着油滑的金粉，猎物倒下的瞬间就已经在盘算它身上有什么");
     }
 }
