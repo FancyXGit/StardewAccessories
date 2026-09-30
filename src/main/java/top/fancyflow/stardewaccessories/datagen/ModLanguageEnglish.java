@@ -63,6 +63,7 @@ public class ModLanguageEnglish extends LanguageProvider {
         add(ModItems.SAVAGE_RING.get(), "Savage Ring");
         add(ModItems.RING_OF_YOBA.get(), "Ring of Yoba");
         add(ModItems.BURGLARS_RING.get(), "Burglar's Ring");
+        add(ModItems.IRIDIUM_BAND.get(), "Iridium Band");
 
         add("tooltip.stardewaccessories.small_glow_ring", "Slightly lights up the area around you");
         add("tooltip.stardewaccessories.glow_ring", "Brightly lights up the area around you");
@@ -74,6 +75,8 @@ public class ModLanguageEnglish extends LanguageProvider {
         add("tooltip.stardewaccessories.savage_ring", "Gain a short speed boost after slaying a monster");
         add("tooltip.stardewaccessories.ring_of_yoba", "Chance to gain Yoba's Blessing when hurt, granting brief immunity to damage");
         add("tooltip.stardewaccessories.burglars_ring", "Monsters drop extra loot when slain");
+        add("tooltip.stardewaccessories.iridium_band.glow", "Brightly lights up the area around you");
+        add("tooltip.stardewaccessories.iridium_band.magnet", "Strongly attracts nearby items");
         add("tooltip.stardewaccessories.requires_lambdynlights", "Requires LambDynamicLights");
         add("tooltip.stardewaccessories.not_installed", "No effect when not installed");
 
@@ -104,5 +107,6 @@ public class ModLanguageEnglish extends LanguageProvider {
         add("tooltip.stardewaccessories.savage_ring.desc", "A ring strung with bone; your stride quickens when prey falls");
         add("tooltip.stardewaccessories.ring_of_yoba.desc", "A ring formed of Yoba's protection, granting a moment of unbreakable resolve in times of peril");
         add("tooltip.stardewaccessories.burglars_ring.desc", "Its knuckles are dusted with slippery gold; the moment prey falls, it already starts tallying the spoils");
+        add("tooltip.stardewaccessories.iridium_band.desc", "A gleaming iridium band where light, strength, and magnetism walk side by side");
     }
 }

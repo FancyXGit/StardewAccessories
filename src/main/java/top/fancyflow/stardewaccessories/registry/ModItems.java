@@ -13,6 +13,7 @@ import top.fancyflow.stardewaccessories.item.BurglarsRing;
 import top.fancyflow.stardewaccessories.item.DescribedItem;
 import top.fancyflow.stardewaccessories.item.EmeraldRing;
 import top.fancyflow.stardewaccessories.item.GlowRing;
+import top.fancyflow.stardewaccessories.item.IridiumBand;
 import top.fancyflow.stardewaccessories.item.JadeRing;
 import top.fancyflow.stardewaccessories.item.MagnetRing;
 import top.fancyflow.stardewaccessories.item.MaterialItem;
@@ -127,6 +128,8 @@ public class ModItems {
     public static final DeferredItem<RingOfYoba> RING_OF_YOBA = ITEMS.registerItem("ring_of_yoba", RingOfYoba::new, new Item.Properties().stacksTo(1));
     // 窃贼戒指：击杀敌对怪物时有概率获得额外掉落（近似抢夺I）；不可堆叠
     public static final DeferredItem<BurglarsRing> BURGLARS_RING = ITEMS.registerItem("burglars_ring", BurglarsRing::new, new Item.Properties().stacksTo(1));
+    // 铱环：同时拥有光辉戒指、磁铁戒指、红宝石戒指的效果；不可堆叠
+    public static final DeferredItem<IridiumBand> IRIDIUM_BAND = ITEMS.registerItem("iridium_band", IridiumBand::new, new Item.Properties().stacksTo(1));
 
     public static void register(IEventBus modEventBus) {
         ITEMS.register(modEventBus);

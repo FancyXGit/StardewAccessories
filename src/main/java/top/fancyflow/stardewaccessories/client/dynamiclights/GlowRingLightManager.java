@@ -96,6 +96,10 @@ public final class GlowRingLightManager {
             if (inventory.findFirstCurio(ModItems.GLOW_RING.get()).isPresent()) {
                 luminance = Math.max(luminance, Config.GLOW_RING_LIGHT.get());
             }
+            // 铱环含光辉戒指的效果，按光辉戒指的亮度计入
+            if (inventory.findFirstCurio(ModItems.IRIDIUM_BAND.get()).isPresent()) {
+                luminance = Math.max(luminance, Config.GLOW_RING_LIGHT.get());
+            }
             return luminance;
         }).orElse(0);
     }

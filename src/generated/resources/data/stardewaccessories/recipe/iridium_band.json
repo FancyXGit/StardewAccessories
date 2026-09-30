@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "stardewaccessories:ruby_ring"
+    },
+    {
+      "item": "stardewaccessories:glow_ring"
+    },
+    {
+      "item": "stardewaccessories:magnet_ring"
+    },
+    {
+      "item": "stardewaccessories:starshard_ingot"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "stardewaccessories:iridium_band"
+  }
+}

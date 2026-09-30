@@ -79,6 +79,10 @@ public class MagnetRingEvents {
                     if (inventory.findFirstCurio(ModItems.MAGNET_RING.get()).isPresent()) {
                         range = Math.max(range, Config.MAGNET_RING_RANGE.get());
                     }
+                    // 铱环含磁铁戒指的效果，按磁铁戒指的范围计入
+                    if (inventory.findFirstCurio(ModItems.IRIDIUM_BAND.get()).isPresent()) {
+                        range = Math.max(range, Config.MAGNET_RING_RANGE.get());
+                    }
                     return range;
                 })
                 .orElse(0.0D);

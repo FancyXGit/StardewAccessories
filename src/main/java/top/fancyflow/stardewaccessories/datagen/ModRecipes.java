@@ -210,6 +210,15 @@ public class ModRecipes extends RecipeProvider {
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(
                         StardewAccessories.MODID, "magnet_ring_from_small_magnet_ring"));
 
+        // 无序合成： 红宝石戒指 + 光辉戒指 + 磁铁戒指 + 星陨锭 = 铱环
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.IRIDIUM_BAND.get())
+                .requires(ModItems.RUBY_RING.get())
+                .requires(ModItems.GLOW_RING.get())
+                .requires(ModItems.MAGNET_RING.get())
+                .requires(ModItems.STARSHARD_INGOT.get())
+                .unlockedBy("has_starshard_ingot", has(ModItems.STARSHARD_INGOT.get()))
+                .save(recipeOutput);
+
         // 熔炼： 星之碎片 = 星陨锭
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.STARSHARD.get()),
                         RecipeCategory.MISC, ModItems.STARSHARD_INGOT.get(), 0.7F, 200)
