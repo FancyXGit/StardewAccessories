@@ -87,26 +87,26 @@ public class ModLanguageChinese extends LanguageProvider {
         add("tooltip.stardewaccessories.blood_essence.source", "击杀蝙蝠或幻翼时小概率掉落");
 
         // 风味描述
-        add("tooltip.stardewaccessories.ruby_ring.desc", "附魔的红宝石，让每一击都更沉一分");
-        add("tooltip.stardewaccessories.emerald_ring.desc", "附魔的绿宝石，让出手的节奏轻快起来");
-        add("tooltip.stardewaccessories.jade_ring.desc", "温润的翡翠里，藏着一道锋芒");
-        add("tooltip.stardewaccessories.aquamarine_ring.desc", "一汪附魔的海水，让破绽无处可藏");
+        add("tooltip.stardewaccessories.ruby_ring.desc", "让攻击更有力度");
+        add("tooltip.stardewaccessories.emerald_ring.desc", "加快出手节奏");
+        add("tooltip.stardewaccessories.jade_ring.desc", "善于利用破绽");
+        add("tooltip.stardewaccessories.aquamarine_ring.desc", "让破绽无处可藏");
         add("tooltip.stardewaccessories.topaz_ring.desc", "戴着这个会感觉安全一点点");
-        add("tooltip.stardewaccessories.amethyst_ring.desc", "附魔的紫水晶，挥击时带着一股暗劲");
-        add("tooltip.stardewaccessories.small_glow_ring.desc", "一簇微光，在黑暗里静静亮着");
-        add("tooltip.stardewaccessories.glow_ring.desc", "一团明亮的光，照着你走过夜路");
-        add("tooltip.stardewaccessories.ring_blank.desc", "一枚素圈，等着被镶上宝石");
-        add("tooltip.stardewaccessories.lumenite_ring_blank.desc", "流明晶打磨的戒圈，还留着一丝微光");
-        add("tooltip.stardewaccessories.metal_ring_blank.desc", "一枚沉甸甸的金属素圈，隐隐带着磁性");
-        add("tooltip.stardewaccessories.dark_alloy_ring_blank.desc", "幽暗的合金素圈，泛着冷硬的暗光");
-        add("tooltip.stardewaccessories.small_magnet_ring.desc", "碎磁石嵌在戒面上，散落的物件会自己找上门来");
-        add("tooltip.stardewaccessories.magnet_ring.desc", "完整的磁石戒面，散落的物件纷纷聚拢过来");
-        add("tooltip.stardewaccessories.slime_charmer_ring.desc", "史莱姆见了你，只剩下黏糊糊的亲近");
-        add("tooltip.stardewaccessories.warrior_ring.desc", "战意凝成的戒指，斩杀之后仍有余勇");
-        add("tooltip.stardewaccessories.vampire_ring.desc", "饮血之戒，斩杀之后生命悄然回流");
-        add("tooltip.stardewaccessories.savage_ring.desc", "骨头串成的戒指，猎物倒下时脚步忽然轻快");
-        add("tooltip.stardewaccessories.ring_of_yoba.desc", "由巴的庇护凝成的戒指，危难时会赐下一瞬的不破之身");
-        add("tooltip.stardewaccessories.burglars_ring.desc", "指节沾着油滑的金粉，猎物倒下的瞬间就已经在盘算它身上有什么");
-        add("tooltip.stardewaccessories.iridium_band.desc", "熠熠生辉的铱制环身，光、力与磁三道祝福并肩而行");
+        add("tooltip.stardewaccessories.amethyst_ring.desc", "挥击时带着一股暗劲");
+        add("tooltip.stardewaccessories.small_glow_ring.desc", "一簇微光");
+        add("tooltip.stardewaccessories.glow_ring.desc", "一团明亮的光");
+        add("tooltip.stardewaccessories.ring_blank.desc", "一枚素圈");
+        add("tooltip.stardewaccessories.lumenite_ring_blank.desc", "流明晶打磨的戒圈");
+        add("tooltip.stardewaccessories.metal_ring_blank.desc", "一枚沉甸甸的金属素圈");
+        add("tooltip.stardewaccessories.dark_alloy_ring_blank.desc", "幽暗的合金素圈");
+        add("tooltip.stardewaccessories.small_magnet_ring.desc", "碎磁石嵌在戒面上");
+        add("tooltip.stardewaccessories.magnet_ring.desc", "完整的磁石戒面");
+        add("tooltip.stardewaccessories.slime_charmer_ring.desc", "让史莱姆亲近你");
+        add("tooltip.stardewaccessories.warrior_ring.desc", "战意凝成的戒指");
+        add("tooltip.stardewaccessories.vampire_ring.desc", "饮血之戒");
+        add("tooltip.stardewaccessories.savage_ring.desc", "自己的脚步忽然轻快");
+        add("tooltip.stardewaccessories.ring_of_yoba.desc", "危难时赐予不破之身");
+        add("tooltip.stardewaccessories.burglars_ring.desc", "我全都要");
+        add("tooltip.stardewaccessories.iridium_band.desc", "熠熠生辉的铱制环身");
     }
 }

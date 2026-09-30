@@ -87,26 +87,26 @@ public class ModLanguageEnglish extends LanguageProvider {
         add("tooltip.stardewaccessories.blood_essence.source", "Occasional drop from bats or phantoms");
 
         // Flavor descriptions
-        add("tooltip.stardewaccessories.ruby_ring.desc", "An enchanted ruby, putting more weight behind every swing");
-        add("tooltip.stardewaccessories.emerald_ring.desc", "An enchanted emerald, quickening the rhythm of your strikes");
-        add("tooltip.stardewaccessories.jade_ring.desc", "A sharp edge sleeps within the smooth jade");
-        add("tooltip.stardewaccessories.aquamarine_ring.desc", "A drop of enchanted sea, leaving no weak point hidden");
+        add("tooltip.stardewaccessories.ruby_ring.desc", "Makes your attacks hit harder");
+        add("tooltip.stardewaccessories.emerald_ring.desc", "Speeds up your striking rhythm");
+        add("tooltip.stardewaccessories.jade_ring.desc", "Skilled at exploiting weak points");
+        add("tooltip.stardewaccessories.aquamarine_ring.desc", "Leaves no weak point hidden");
         add("tooltip.stardewaccessories.topaz_ring.desc", "You feel a little bit safer wearing this");
-        add("tooltip.stardewaccessories.amethyst_ring.desc", "Enchanted amethyst, giving every blow a stubborn shove");
-        add("tooltip.stardewaccessories.small_glow_ring.desc", "A tiny light, glowing softly in the dark");
-        add("tooltip.stardewaccessories.glow_ring.desc", "A bright, steady light to see you through the night");
-        add("tooltip.stardewaccessories.ring_blank.desc", "A plain band, waiting for a gem");
-        add("tooltip.stardewaccessories.lumenite_ring_blank.desc", "A lumenite band, still holding a trace of light");
-        add("tooltip.stardewaccessories.metal_ring_blank.desc", "A weighty metal band, faintly humming with magnetism");
-        add("tooltip.stardewaccessories.dark_alloy_ring_blank.desc", "A darkly gleaming band of cold alloy");
-        add("tooltip.stardewaccessories.small_magnet_ring.desc", "Shards of lodestone set in the band; loose things find their way to you");
-        add("tooltip.stardewaccessories.magnet_ring.desc", "A full lodestone face; loose things hurry into your grasp");
-        add("tooltip.stardewaccessories.slime_charmer_ring.desc", "Slimes only want to be your gooey friends now");
-        add("tooltip.stardewaccessories.warrior_ring.desc", "A ring forged from battle spirit, its fury lingering after the kill");
-        add("tooltip.stardewaccessories.vampire_ring.desc", "A blood-drinking band that returns life with every kill");
-        add("tooltip.stardewaccessories.savage_ring.desc", "A ring strung with bone; your stride quickens when prey falls");
-        add("tooltip.stardewaccessories.ring_of_yoba.desc", "A ring formed of Yoba's protection, granting a moment of unbreakable resolve in times of peril");
-        add("tooltip.stardewaccessories.burglars_ring.desc", "Its knuckles are dusted with slippery gold; the moment prey falls, it already starts tallying the spoils");
-        add("tooltip.stardewaccessories.iridium_band.desc", "A gleaming iridium band where light, strength, and magnetism walk side by side");
+        add("tooltip.stardewaccessories.amethyst_ring.desc", "Adds a hidden force to every swing");
+        add("tooltip.stardewaccessories.small_glow_ring.desc", "A tiny glimmer");
+        add("tooltip.stardewaccessories.glow_ring.desc", "A bright sphere of light");
+        add("tooltip.stardewaccessories.ring_blank.desc", "A plain band");
+        add("tooltip.stardewaccessories.lumenite_ring_blank.desc", "A band polished from lumenite");
+        add("tooltip.stardewaccessories.metal_ring_blank.desc", "A heavy plain metal band");
+        add("tooltip.stardewaccessories.dark_alloy_ring_blank.desc", "A dark, dim alloy band");
+        add("tooltip.stardewaccessories.small_magnet_ring.desc", "Shattered lodestone set in the band");
+        add("tooltip.stardewaccessories.magnet_ring.desc", "A whole lodestone ring face");
+        add("tooltip.stardewaccessories.slime_charmer_ring.desc", "Makes slimes fond of you");
+        add("tooltip.stardewaccessories.warrior_ring.desc", "A ring formed from battle spirit");
+        add("tooltip.stardewaccessories.vampire_ring.desc", "A blood-drinking ring");
+        add("tooltip.stardewaccessories.savage_ring.desc", "Your steps suddenly feel lighter");
+        add("tooltip.stardewaccessories.ring_of_yoba.desc", "Grants an unbreakable body in times of peril");
+        add("tooltip.stardewaccessories.burglars_ring.desc", "I want it all");
+        add("tooltip.stardewaccessories.iridium_band.desc", "A gleaming iridium band");
     }
 }
