@@ -22,7 +22,9 @@ sourceSets.main.resources {
     srcDir('src/generated/resources')
 
     // Exclude common development only resources from finalized outputs
-    exclude("src/generated/**/.cache") // datagen cache files
+    // 排除 datagen 缓存：srcDir 为 src/generated/resources，缓存目录 .cache 位于其根下。
+    // 注意排除模式是相对各 srcDir 的路径，用 "**/.cache" 才能匹配到根级 .cache。
+    exclude("**/.cache") // datagen cache files
 }
 
 repositories {
@@ -190,6 +192,8 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
             mod_version            : mod_version,
     ]
     inputs.properties replaceProperties
+    // 模板文件为 UTF-8，显式指定过滤字符集，避免在 Windows 下按 GBK 读写导致中文注释乱码
+    filteringCharset = 'UTF-8'
     expand replaceProperties
     from "src/main/templates"
     into "build/generated/sources/modMetadata"
